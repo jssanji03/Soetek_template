@@ -662,7 +662,7 @@ input:disabled {
   background-color: rgba(204, 204, 204, 0.315);
 }
 
-.active {
+.activePage {
   background-color: #325eaf;
 }
 
@@ -1294,9 +1294,9 @@ table.dataTable .assignActive {
   -webkit-box-shadow: 1px 2px 5px #88888869;
           box-shadow: 1px 2px 5px #88888869;
   width: 100%;
-  height: 100%;
+  height: auto;
   margin-top: 20px;
-  padding: 10px;
+  padding: 20px;
 }
 
 @media (max-width: 900px) {
@@ -1305,13 +1305,20 @@ table.dataTable .assignActive {
   }
 }
 
-.card-calendar .member-List {
-  width: 100%;
-  margin-top: 40px;
+.card-calendar .row {
+  height: 100%;
+  overflow-x: scroll;
 }
 
-.card-calendar .member-List .members {
+.card-calendar .row .member-List {
+  table-layout: fixed;
   width: 100%;
+  margin-top: 30px;
+}
+
+.card-calendar .row .member-List .members {
+  width: 100%;
+  height: 100%;
   border-radius: 3px;
   padding: 10px;
   background-color: #f5f5f5;
@@ -1320,35 +1327,39 @@ table.dataTable .assignActive {
           box-shadow: 1px 2px 2px #8888883b;
 }
 
-.card-calendar .member-List .members:nth-child(odd) {
+.card-calendar .row .member-List .members:nth-child(odd) {
   border-left: 5px solid #325eaf;
 }
 
-.card-calendar .member-List .members:nth-child(even) {
+.card-calendar .row .member-List .members:nth-child(even) {
   border-left: 5px solid #2c7edb;
 }
 
-.card-calendar .member-List .members p {
+.card-calendar .row .member-List .members p {
   line-height: 30px;
   margin: 0px;
 }
 
-.card-calendar .member-List .members:hover {
+.card-calendar .row .member-List .members:hover {
   background-color: #e4f3ff;
 }
 
-.card-calendar .calendar-List {
+.card-calendar .row .calendar-List {
   width: 100%;
-  height: 100%;
+  padding: 3px;
   overflow-x: scroll;
 }
 
-.card-calendar .calendar-List .calendar {
+.card-calendar .row .calendar-List table {
+  table-layout: auto;
   width: 100%;
   height: 100%;
+  margin: 0px;
 }
 
-.card-calendar .calendar-List .calendar thead .weekdays th {
+.card-calendar .row .calendar-List table thead .weekdays th {
+  position: -webkit-sticky;
+  position: sticky;
   top: 0;
   width: 10%;
   background: #8e352e;
@@ -1358,17 +1369,20 @@ table.dataTable .assignActive {
   text-align: center;
 }
 
-.card-calendar .calendar-List .calendar thead .weekdays th .box {
+.card-calendar .row .calendar-List table thead .weekdays th .box {
   display: inline-block;
   width: 120px;
 }
 
-.card-calendar .calendar-List .calendar tbody tr td {
-  width: 400px;
+.card-calendar .row .calendar-List table tbody tr {
+  height: inherit;
+}
+
+.card-calendar .row .calendar-List table tbody tr td {
   border: 1px solid #ccc;
 }
 
-.card-calendar .calendar-List .calendar .event {
+.card-calendar .row .calendar-List table .event {
   clear: both;
   display: block;
   font-size: 13px;
@@ -1382,7 +1396,7 @@ table.dataTable .assignActive {
   text-decoration: none;
 }
 
-.card-calendar .calendar-List .calendar .event_danger {
+.card-calendar .row .calendar-List table .event_danger {
   clear: both;
   display: block;
   font-size: 13px;
@@ -1396,7 +1410,7 @@ table.dataTable .assignActive {
   text-decoration: none;
 }
 
-.card-calendar .calendar-List .calendar .event-time {
+.card-calendar .row .calendar-List table .event-time {
   color: #325eaf;
   line-height: 25px;
 }

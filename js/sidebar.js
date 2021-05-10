@@ -24,8 +24,8 @@ $(function () {
         var href= $(this).attr("href");
         if (href != undefined && pathname.indexOf(href) >= 0){
             $(this).addClass("onPage");
-            $(this).parents('.has-menu').children('.nav-link').addClass("active");
-            $(this).filter('.nav-link').addClass("active");
+            $(this).parents('.has-menu').children('.nav-link').addClass("activePage");
+            $(this).filter('.nav-link').addClass("activePage");
             $(this).parents('.dropdown-menu').addClass("open");
         }
     });
@@ -35,7 +35,7 @@ $(function () {
 // Laptop SideBar Control ///
 $(function () {
     $(document).delegate('#menu-laptop-toggle', 'click', function(event) {
-        $("#wrapper").addClass("openmenu");
+        $("#wrapper").toggleClass("openmenu");
         event.stopPropagation();
 	})
     $(document).delegate('#page-content-wrapper', 'click', function(event) {
@@ -59,49 +59,49 @@ $(function () {
     $(".dark-yellow").click(function () {
         $("#topNav").css("background-color","#fdd835");
         $("#sidebar-wrapper").css("background-color", "#343A40");
-        $(".active").css("background-color", "#ffff6b");
-        $(".active").css("color", "#000");
-        $(".nav-link").not(".active").css("color", "#FFF");
+        $(".activePage").css("background-color", "#ffff6b");
+        $(".activePage").css("color", "#000");
+        $(".nav-link").not(".activePage").css("color", "#FFF");
         $(".side_logo img").attr("src","../public/img/logo.png");
 	})
     $(".dark-brown").click(function() {
         $("#topNav").css("background-color","#d9d4cb");
         $("#sidebar-wrapper").css("background-color", "#773d23");
-        $(".active").css("background-color", "#a9684c");
-        $(".active").css("color","#FFF");
+        $(".activePage").css("background-color", "#a9684c");
+        $(".activePage").css("color","#FFF");
         $(".nav-link").css("color", "#FFF");
         $(".side_logo img").attr("src","../public/img/logo.png");
 	})
     $(".dark-blue").click(function() {
         $("#topNav").css("background-color","#caf0f8");
         $("#sidebar-wrapper").css("background-color", "#0077b6");
-        $(".active").css("background-color", "#023e8a");
-        $(".active").css("color","#FFF");
+        $(".activePage").css("background-color", "#023e8a");
+        $(".activePage").css("color","#FFF");
         $(".nav-link").css("color", "#FFF");
         $(".side_logo img").attr("src","../public/img/logo.png");
     })
     $(".light-red").click(function() {
         $("#topNav").css("background-color","#8d99ae");
         $("#sidebar-wrapper").css("background-color", "#edf2f4");
-        $(".active").css("background-color", "#ef233c");
-        $(".active").css("color","#FFF");
-        $(".nav-link").not(".active").css("color","#2b2d42");
+        $(".activePage").css("background-color", "#ef233c");
+        $(".activePage").css("color","#FFF");
+        $(".nav-link").not(".activePage").css("color","#2b2d42");
         $(".side_logo img").attr("src","../public/img/logo-dark.png");
 	})
     $(".light-purple").click(function() {
         $("#topNav").css("background-color","#8900f2");
         $("#sidebar-wrapper").css("background-color", "#e9ecef");
-        $(".active").css("background-color", "#480ca8");
-        $(".active").css("color","#FFF");
-        $(".nav-link").not(".active").css("color", "#212529");
+        $(".activePage").css("background-color", "#480ca8");
+        $(".activePage").css("color","#FFF");
+        $(".nav-link").not(".activePage").css("color", "#212529");
         $(".side_logo img").attr("src","../public/img/logo-dark.png");
 	})
     $(".light-green").click(function() {
         $("#topNav").css("background-color","#80b918");
         $("#sidebar-wrapper").css("background-color", "#e9ecef");
-        $(".active").css("background-color", "#1b5e20");
-        $(".active").css("color","#FFF");
-        $(".nav-link").not(".active").css("color", "#003300");
+        $(".activePage").css("background-color", "#1b5e20");
+        $(".activePage").css("color","#FFF");
+        $(".nav-link").not(".activePage").css("color", "#003300");
         $(".side_logo img").attr("src","../public/img/logo-dark.png");
 	})
 });

@@ -102,11 +102,16 @@ $(".fixedArea").on('keyup', function () {
 // https://datatables.net/
 
 //## 包含標題與搜尋功能 RWD card - Start ##//
-    $(".listDataTable").DataTable({
+$(".listDataTable").DataTable({
         searching: true,
         "paging": true,
-        "ordering": true,
-        "scrollX": true,
+        "orderCellsTop": true,
+        // "orderMulti": true,
+        "stateSave": true,
+        "fnInitComplete": function (settings, json) {  
+        $(".listDataTable").wrap("<div style='overflow:auto; width:100%;position:relative;'></div>")},
+        "autoWidth": true,  
+        // "scrollX": true,
         "language": {
             "info": "顯示 _PAGE_ 至 _PAGES_",
             "search": "搜尋 :",
@@ -117,13 +122,21 @@ $(".fixedArea").on('keyup', function () {
             "lengthMenu": "顯示 _MENU_ 筆資料"
         },
         buttons: [
-            'print'
+            {
+              extend: 'excel',
+              text: '<i class="fa fa-copy"></i> Excel',
+            },
+            {
+              extend: 'colvis',
+              text: '<i class="fas fa-filter"></i> Colvis',
+            },
+            
         ],
-        dom: "<'row'<'listTitle col-xl-6'><'col-xl-6'fr>>" +
-            "<'row'<'col-sm-12'tlp>>",
-    })
+        dom: "<'row justify-content-between'<'listTitle col-md-8'B><'col-md-4'fr>>" +
+        "<'row'<'col-sm-12'tlp>>",
+  })
 
-    $(".listTitle").append(`<div class='text-lg-left'>
+    $(".listTitle").append(`<div class='text-md-left text-center'>
                             <h2 class="currentName">OOO<span class="currentTitle">的安排日程</span></h2>
                         </div>`)
 

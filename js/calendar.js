@@ -14,8 +14,8 @@ function toDay() {
 
 //創建日期-7天
 function dateWeek() {
-    const content = document.getElementById("content");
-    const weekday = document.getElementById("weekdays");
+    const content = $(".content");
+    const weekday = $(".weekdays");
     
     Date.prototype.addDays = function(days) {
         this.setDate(this.getDate() + days);
@@ -38,14 +38,14 @@ function dateWeek() {
                     <div class="event_danger"><div class="event-time">3:00pm</div>重要事項</div>
                 </td>`; 
     }
-	    weekday.innerHTML = title; //設定日期顯示
-	    content.innerHTML = text; //設定內容顯示
+	    weekday.html(title) //設定日期顯示
+	    content.html(text)  //設定內容顯示
 }
 
 //創建日期-30天
 function dateMonth() {
-    const content = document.getElementById("content");
-    const weekday = document.getElementById("weekdays");
+    const content = $(".content");
+    const weekday = $(".weekdays");
     
     Date.prototype.addDays = function(days) {
         this.setDate(this.getDate() + days);
@@ -68,8 +68,8 @@ function dateMonth() {
                         <div class="event_danger">重要事項</div>
                     </td>`; 
 	    }
-	    weekday.innerHTML = title; //設定日期顯示
-	    content.innerHTML = text; //設定內容顯示
+	    weekday.html(title) //設定日期顯示
+	    content.html(text)  //設定內容顯示
 }
 
 

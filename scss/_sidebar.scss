@@ -5,7 +5,7 @@
 .onPage{
   background-color: rgba(204, 204, 204, 0.315);
 }
-.active{
+.activePage{
   background-color: $primary;
 }
 .open{
@@ -99,8 +99,6 @@
         }
       }
     }
-     
-  
     @media #{$breakpoint-xs},#{$breakpoint-md},#{$breakpoint-lg}{
       width: 15vw;
       height: 100%;
