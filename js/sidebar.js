@@ -65,7 +65,8 @@ $(function () {
         $(".side_logo img").attr("src", "../public/img/logo.png");
         var http = new XMLHttpRequest();
         if (http.status == 404) {
-        $(".side_logo img").hide();
+            $(".side_logo img").hide();
+            alert("hi")
         }
 	})
     $(".dark-brown").click(function() {
