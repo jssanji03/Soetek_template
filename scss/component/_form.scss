@@ -1,5 +1,26 @@
+//--- Alert---//
+.alert{
+    align-items: center;
+    padding: 10px;
+    position: fixed;
+    z-index: 999;
+    .icon{
+        font-size: 25px;
+    }
+    .title{
+        font-size: 18px;
+        line-height: 20px;
+    }
+    p{
+        font-size: 15px;
+        line-height: 15px;
+    }
+}
 
-//--- Index.html  Search bar---//
+
+
+
+//--- Title and BreadCrumb---//
 .page_title{
     width: 100%;
     align-items: center;
@@ -19,7 +40,9 @@
         }
     }
 }
+//--- Title and BreadCrumb End ---//
 
+//--- Index.html  Search bar---//
 //  搜尋 //
 .SearchBar{
     width: 100%;
@@ -79,7 +102,6 @@
     }
 }
 //--- Index.html  Search bar End---//
-
 
 // #InputArea
 .InputArea{

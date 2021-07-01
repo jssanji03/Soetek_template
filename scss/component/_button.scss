@@ -56,7 +56,6 @@
 // 日曆 搜尋列 button //
 .btn-calendar{
     @include button($background-color: $yellow,$fontColor: $text,$hover-color:#ffa601);
-    border: 1px solid $border;
     height: 35px;
 }
 

@@ -14,20 +14,6 @@
     <!-- Favicon -->
     <link rel="icon" href="./public/img/core-img/favicon.png">
 
-
-    <!-- Plugins -->
-    <link rel="stylesheet" href="./plugins/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./plugins/fontawesome-free/css/all.min.css">
-    <link rel="stylesheet" href="./plugins/select2/css/select2.min.css">
-    <link rel="stylesheet" href="./plugins/datatables/css/jquery.dataTables.min.css">
-    <link rel="stylesheet" href="./plugins/Buttons-1.6.5/css/buttons.dataTables.min.css">
-    <!-- <link rel="stylesheet" href="./plugins/chart.js/Chart.min.css"> -->
-    <link rel="stylesheet" href="./plugins/select2/css/multiple-select.min.css">
-    <link rel="stylesheet" href="./plugins/Magicsuggest/css/magicsuggest-min.css">
-
-    <!-- dateRange picker -->
-    <link rel="stylesheet" href="./plugins/daterangepicker-master/daterangepicker.css">
-
     <!-- Stylesheet -->
     <link rel="stylesheet" href="./scss/style.min.css">
 
@@ -84,6 +70,8 @@
                         <li class="dropdown-item"><a href="logout.html">Logout</a></li>
                     </ul>
                 </li>
+                <li class="nav-item"><a href="organization.html" class="nav-link"><i class="fa-icon fas fa-edit"></i>公司組織圖</a>
+                </li>
             </ul>
         </div>
         <!-- /#sidebar-wrapper -->
@@ -114,6 +102,60 @@
             <!-- ##### Section Start ##### -->
             <section class="container-fluid">
                 <div class="row page_title">
+                    <!--## Alert Card Start ##-->
+                    <!-- Warning -->
+                    <div class="alert alert-warning alert-dismissible fade show col-12 d-flex"role="alert">
+                        <div class="col-1 text-center p-0">
+                            <strong class="icon"><i class="fas fa-exclamation-triangle"></i></strong>
+                        </div>
+                        <div class="col-11 p-0">
+                            <strong class="title"> Alert!</strong>
+                            <p> You should check in on some of those fields below.</p>
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                    </div>
+                    <!-- Success -->
+                    <div class="alert alert-success alert-dismissible fade show col-12 d-flex"role="alert">
+                        <div class="col-1 text-center p-0">
+                            <strong class="icon"><i class="fas fa-check-circle"></i></strong>
+                        </div>
+                        <div class="col-11 p-0">
+                            <strong class="title"> Success!</strong>
+                            <p> You should check in on some of those fields below.</p>
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                    </div>
+                    <!-- Error -->
+                    <div class="alert alert-danger alert-dismissible fade show col-12 d-flex"role="alert">
+                        <div class="col-1 text-center p-0">
+                            <strong class="icon"><i class="fas fa-times"></i></strong>
+                        </div>
+                        <div class="col-11 p-0">
+                            <strong class="title"> Error!</strong>
+                            <p> You should check in on some of those fields below.</p>
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                    </div>
+                    <!-- Info -->
+                    <div class="alert alert-primary alert-dismissible fade show col-12 d-flex"role="alert">
+                        <div class="col-1 text-center p-0">
+                            <strong class="icon"><i class="fas fa-info-circle"></i></strong>
+                        </div>
+                        <div class="col-11 p-0">
+                            <strong class="title"> Info!</strong>
+                            <p> You should check in on some of those fields below.</p>
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                    </div>
+                    <!--## Alert Card End ##-->
                     <h2 class="col-6">Form</h2>
                     <nav aria-label="breadcrumb" class="col-6">
                         <ol class="breadcrumb">

@@ -14,21 +14,7 @@
     <!-- Favicon -->
     <link rel="icon" href="./public/img/core-img/favicon.png">
 
-
-    <!-- Plugins -->
-    <link rel="stylesheet" href="./plugins/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./plugins/fontawesome-free/css/all.min.css">
-    <!-- <link rel="stylesheet" href="./plugins/animate/animate.css"> -->
-    <link rel="stylesheet" href="./plugins/select2/css/select2.min.css">
-    <link rel="stylesheet" href="./plugins/datatables/css/jquery.dataTables.min.css">
-    <link rel="stylesheet" href="./plugins/Buttons-1.6.5/css/buttons.dataTables.min.css">
-    <!-- <link rel="stylesheet" href="./plugins/chart.js/Chart.min.css"> -->
-    <link rel="stylesheet" href="./plugins/select2/css/multiple-select.min.css">
-    <link rel="stylesheet" href="./plugins/Magicsuggest/css/magicsuggest-min.css">
-
-    <!-- dateRange picker -->
-    <link rel="stylesheet" href="./plugins/daterangepicker-master/daterangepicker.css">
-
+    
     <!-- Stylesheet -->
     <link rel="stylesheet" href="./scss/style.min.css">
     
@@ -60,7 +46,7 @@
                 <img src="./public/img/logo.png"></img>
             </div>
             <ul class="navbar-nav">
-                <li class="nav-item"><a href="index.html" class="nav-link"><i class="fa-icon fas fa-home "></i>首頁</a>
+                <li class="nav-item"><a href="index.html" class="nav-link"><i class="fa-icon fas fa-home "></i>index</a>
                 </li>
                 <li class="nav-item has-menu"><a class="nav-link"><i class="fa-icon far fa-file"></i>Form<i
                             class="fas fa-angle-down"></i></a>
@@ -84,6 +70,8 @@
                         <li class="dropdown-item"><a href="login2.html">Login2</a></li>
                         <li class="dropdown-item"><a href="logout.html">Logout</a></li>
                     </ul>
+                </li>
+                <li class="nav-item"><a href="organization.html" class="nav-link"><i class="fa-icon fas fa-edit"></i>公司組織圖</a>
                 </li>
             </ul>
         </div>
@@ -122,7 +110,7 @@
                                 <div class="mb-0 col-12">
                                     <button class="btn-collapse" type="button" data-toggle="collapse" data-target="#collapseOne"
                                         aria-expanded="false" aria-controls="collapseOne">
-                                        搜尋條件
+                                        Search
                                         <i class="fas fa-chevron-down float-right"></i>
                                     </button>
                                 </div>
@@ -310,18 +298,25 @@
                     <table class="nowrap listDataTable" style="width:100%">
                         <thead>
                             <tr class="tr-only-hide">
-                                <th>部門</th>
-                                <th>指派人員</th>
-                                <th>工程人員</th>
-                                <th>客戶</th>
-                                <th>地址</th>
-                                <th>機種</th>
-                                <th>錯誤碼</th>
+                                <th rowspan="2">部門</th>
+                                <th rowspan="2">指派人員</th>
+                                <th rowspan="2">工程人員</th>
+                                <th rowspan="2">客戶</th>
+                                <th rowspan="2">地址</th>
+                                <th rowspan="2">機種</th>
+                                <th rowspan="2">錯誤碼</th>
                                 <th>故障內容​</th>
-                                <th>服務日期​</th>
+                                <th>​</th>
                                 <th>售服狀態​</th>
                                 <th>報告書​</th>
                                 <th>動作</th>
+                            </tr>
+                            <tr class="tr-only-hide">
+                                <th>機種</th>
+                                <th>錯誤碼</th>
+                                <th>故障內容​</th>
+                                <th>故障內容​</th>
+                                <th>故障內容​</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -333,8 +328,8 @@
                                     <td data-th="地址">台中市大甲區日南里東三街10號</td>
                                     <td data-th="機種">ML3015LVP-40CF</td>
                                     <td data-th="錯誤碼">1</td>
-                                    <td data-th="故障內容​">拆機</td>
-                                    <td data-th="服務日期​"></td>
+                                    <td data-th="故障內容​">拆機1</td>
+                                    <td data-th="服務日期​">1</td>
                                     <td data-th="售服狀態​">指派</td>
                                     <td data-th="報告書​"></td>
                                     <td data-th="動作">
@@ -354,8 +349,8 @@
                                     <td data-th="地址">台中市大甲區日南里東三街10號</td>
                                     <td data-th="機種">ML3015LVP-40CF</td>
                                     <td data-th="錯誤碼">2</td>
-                                    <td data-th="故障內容​">拆機</td>
-                                    <td data-th="服務日期​"></td>
+                                    <td data-th="故障內容​">拆機2</td>
+                                    <td data-th="服務日期​">2</td>
                                     <td data-th="售服狀態​">指派</td>
                                     <td data-th="報告書​"></td>
                                     <td data-th="動作">
@@ -376,8 +371,8 @@
                                     <td data-th="地址">台中市大甲區日南里東三街10號</td>
                                     <td data-th="機種">ML3015LVP-40CF</td>
                                     <td data-th="錯誤碼">3</td>
-                                    <td data-th="故障內容​">拆機</td>
-                                    <td data-th="服務日期​"></td>
+                                    <td data-th="故障內容​">拆機3</td>
+                                    <td data-th="服務日期​">3</td>
                                     <td data-th="售服狀態​">指派</td>
                                     <td data-th="報告書​"></td>
                                     <td data-th="動作">
@@ -480,13 +475,13 @@
     <script src="./plugins/Magicsuggest/js/magicsuggest-min.js"></script>
     <!-- DataTables -->
     <script src="./plugins/datatables/js/jquery.dataTables.min.js"></script>
-    <script src="./plugins/Buttons-1.6.5/js/dataTables.buttons.min.js"></script>
-    <!-- <script src="./plugins/DataTables-colspan/dataTables.buttons.js"></script> -->
-    <script src="./plugins/Buttons-1.6.5/js/buttons.print.min.js"></script>
-    <!-- <script src="./plugins/DataTables-colspan/buttons.print.js"></script> -->
+    <!-- <script src="./plugins/Buttons-1.6.5/js/dataTables.buttons.min.js"></script> -->
+    <script src="./plugins/DataTables-colspan/dataTables.buttons.js"></script>
+    <!-- <script src="./plugins/Buttons-1.6.5/js/buttons.print.min.js"></script> -->
+    <script src="./plugins/DataTables-colspan/buttons.print.js"></script>
     <script src="./plugins/select2/js/multiple-select.min.js"></script>
-    <script src="./plugins/Buttons-1.6.5/js/buttons.html5.min.js"></script>
-    <!-- <script src="./plugins/DataTables-colspan/buttons.html5.js"></script> -->
+    <!-- <script src="./plugins/Buttons-1.6.5/js/buttons.html5.min.js"></script> -->
+    <script src="./plugins/DataTables-colspan/buttons.html5.js"></script>
     <script src="./plugins/Buttons-1.6.5/js/buttons.colVis.min.js"></script>
     <script src="./plugins/JSZip-2.5.0/jszip.min.js"></script>
     <!-- SummerNote -->

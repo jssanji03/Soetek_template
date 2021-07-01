@@ -72,6 +72,11 @@ function dateMonth() {
 	    content.html(text)  //設定內容顯示
 }
 
+$(".choice button").eq(0).css({'background': '#2eafbb', 'color': '#FFF' })
+$(".choice button").click(
+    function () {
+        $(".choice button").eq($(this).index()).css({'background': '#2eafbb', 'color': '#FFF' }).siblings().css({ 'background': '#FFCC01','color':'#5a5a5a' });
+})
 
 
 

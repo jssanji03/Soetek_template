@@ -1,0 +1,57 @@
+.organization_table {
+  border-collapse: separate;
+  margin: 0 auto;
+}
+.jOrgChart .node {
+  width: 120px;
+  height: 50px;
+  line-height: 40px;
+  border-radius: 4px;
+  margin: 0 8px;
+}
+.jOrgChart .organization_text{
+    text-decoration: none;
+    color: #fff;
+    font-size: 12px;
+    .dept{
+      color: #f7ca00;
+    }
+}
+.jOrgChart{
+  .level0{
+    background-color: $primary;
+    line-height: 20px;
+    }
+    .level1{
+    background-color: $secondary;
+    line-height: 20px;
+    }
+    .level2{
+    background-color: #44a1d0;
+    line-height: 20px;
+      .dept{
+        color: #bdf3ec;
+      }
+    }
+    .level3{
+    background-color: rgb(170, 63, 63);
+    line-height: 20px;
+    }
+}
+.jOrgChart .node {
+    @media #{$breakpoint-md} {
+    width: 70px;
+    height: 100px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    }
+    @media #{$breakpoint-xs} {
+    width: 50px;
+    height: 100px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    }
+}

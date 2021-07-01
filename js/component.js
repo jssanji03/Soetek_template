@@ -105,7 +105,9 @@ $(".fixedArea").on('keyup', function () {
 $(".listDataTable").DataTable({
         searching: true,
         "paging": true,
-        "orderCellsTop": true,
+  "orderCellsTop": true,
+        
+            
         // "orderMulti": true,
         "stateSave": true,
         "fnInitComplete": function (settings, json) {  
@@ -125,10 +127,15 @@ $(".listDataTable").DataTable({
             {
               extend: 'excel',
               text: '<i class="fa fa-copy"></i> Excel',
+              exportOptions: {
+              columns: ':visible'
+              }
             },
             {
               extend: 'colvis',
               text: '<i class="fas fa-filter"></i> Colvis',
+              columns: ':not(:eq(8),:eq(1))',
+        
             },
             
         ],
@@ -136,9 +143,9 @@ $(".listDataTable").DataTable({
         "<'row'<'col-sm-12'tlp>>",
   })
 
-    $(".listTitle").append(`<div class='text-md-left text-center'>
-                            <h2 class="currentName">OOO<span class="currentTitle">的安排日程</span></h2>
-                        </div>`)
+    // $(".listTitle").append(`<div class='text-md-left text-center'>
+    //                         <h2 class="currentName">OOO<span class="currentTitle">的安排日程</span></h2>
+    //                     </div>`)
 
 
   // Datatable Hover Background //
