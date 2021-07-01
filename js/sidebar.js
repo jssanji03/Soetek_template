@@ -108,7 +108,8 @@ $(function () {
 
 $(document).ready(function(){
   $(".side_logo img").ajaxError(()=>{
-    $(this).hide();
+      $(this).hide();
+      alert("Error")
   });
 });
 
