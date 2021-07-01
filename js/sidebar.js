@@ -86,7 +86,7 @@ $(function () {
         $(".activePage").css("background-color", "#ef233c");
         $(".activePage").css("color","#FFF");
         $(".nav-link").not(".activePage").css("color","#2b2d42");
-        $(".side_logo img").attr("src","https://github.com/jssanji03/Soetek_template/blob/main/public/img/logo-dark.png");
+        $(".side_logo img").attr("src","../public/img/logo-dark.png");
 	})
     $(".light-purple").click(function() {
         $("#topNav").css("background-color","#8900f2");
