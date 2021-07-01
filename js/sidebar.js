@@ -107,7 +107,7 @@ $(function () {
 });
 
 $(document).ready(function(){
-  $(".side_logo img").on('error',()=>{
+  $(".side_logo img").ajaxError(()=>{
     $(this).hide();
   });
 });
