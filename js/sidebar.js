@@ -62,7 +62,11 @@ $(function () {
         $(".activePage").css("background-color", "#ffff6b");
         $(".activePage").css("color", "#000");
         $(".nav-link").not(".activePage").css("color", "#FFF");
-        $(".side_logo img").attr("src","../public/img/logo.png");
+        $(".side_logo img").attr("src", "../public/img/logo.png");
+        var http = new XMLHttpRequest();
+        if (http.status == 404) {
+        $(".side_logo img").hide();
+        }
 	})
     $(".dark-brown").click(function() {
         $("#topNav").css("background-color","#d9d4cb");
@@ -107,9 +111,8 @@ $(function () {
 });
 
 $(document).ready(function(){
-  $(document).ajaxError(()=>{
-      $(".side_logo img").hide();
-      alert("Error")
+  $(".side_logo img").on('error',()=>{
+    $(this).hide();
   });
 });
 
