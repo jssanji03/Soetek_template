@@ -107,8 +107,8 @@ $(function () {
 });
 
 $(document).ready(function(){
-  $(".side_logo img").ajaxError(()=>{
-      $(this).hide();
+  $(document).ajaxError(()=>{
+      $(".side_logo img").hide();
       alert("Error")
   });
 });
