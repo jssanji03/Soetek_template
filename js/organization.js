@@ -106,7 +106,7 @@
 
         function showall(menu_list, parent) {
             $.each(menu_list, function (index, val) {
-                console.log(val);
+                // console.log(val);
                 if (val.childrens.length > 0) {
                     var li = $("<li></li>").addClass("level"+val.pid);
                     li.append(`<a class="organization_text" href='javascript:void(0)' onclick=getOrgId(${val.id});><span class="dept">${val.Dept}</span> <br> ${val.name}</a>`).append("<ul></ul>").appendTo(parent);

@@ -104,9 +104,12 @@ $(function () {
         $(".nav-link").not(".activePage").css("color", "#003300");
         $(".side_logo img").attr("src","../public/img/logo-dark.png");
     })
-    $(".side_logo img").error(() => {
-        $(this).hide();
-    })
+});
+
+$(document).ready(function(){
+  $(".side_logo img").on('error',()=>{
+    $(this).hide();
+  });
 });
 
 
