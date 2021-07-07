@@ -1763,77 +1763,572 @@ input:disabled {
 }
 
 .jOrgChart .node {
-  width: 120px;
-  height: 50px;
+  width: 180px;
+  height: 90px;
   line-height: 40px;
   border-radius: 4px;
   margin: 0 8px;
-}
-
-.jOrgChart .organization_text {
-  text-decoration: none;
-  color: #fff;
-  font-size: 12px;
-}
-
-.jOrgChart .organization_text .dept {
-  color: #f7ca00;
-}
-
-.jOrgChart .level0 {
-  background-color: #325eaf;
-  line-height: 20px;
-}
-
-.jOrgChart .level1 {
-  background-color: #2c7edb;
-  line-height: 20px;
-}
-
-.jOrgChart .level2 {
-  background-color: #44a1d0;
-  line-height: 20px;
-}
-
-.jOrgChart .level2 .dept {
-  color: #bdf3ec;
-}
-
-.jOrgChart .level3 {
-  background-color: #aa3f3f;
-  line-height: 20px;
+  padding: 0px;
+  -webkit-box-shadow: 1px 1px 3px #ccc;
+          box-shadow: 1px 1px 3px #ccc;
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .jOrgChart .node {
-    width: 70px;
-    height: 100px;
-    display: -webkit-inline-box;
-    display: -ms-inline-flexbox;
-    display: inline-flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    width: 150px;
+    height: 210px;
   }
 }
 
 @media only screen and (max-width: 767px) {
   .jOrgChart .node {
-    width: 50px;
-    height: 100px;
-    display: -webkit-inline-box;
-    display: -ms-inline-flexbox;
-    display: inline-flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    padding: 5px;
+    width: 100px;
+    height: 200px;
   }
+}
+
+.jOrgChart .level0 {
+  background-color: #bddbf3;
+}
+
+.jOrgChart .level0 a {
+  font-size: 12px;
+}
+
+.jOrgChart .level0 a .dept {
+  line-height: 25px;
+  color: #ffffff;
+  background-color: #325eaf;
+  border-radius: 4px 4px 0px 0px;
+}
+
+.jOrgChart .level0 a .pic {
+  float: left;
+  width: 65px;
+  height: 65px;
+  overflow: hidden;
+}
+
+.jOrgChart .level0 a .pic img {
+  max-width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.jOrgChart .level0 a .position {
+  text-align: left;
+  padding-left: 75px;
+  line-height: 20px;
+  padding-top: 3px;
+  color: lightcoral;
+}
+
+.jOrgChart .level0 a .name {
+  text-align: left;
+  padding-left: 75px;
+  line-height: 20px;
+  color: #0f1112;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.jOrgChart .level0 a .count {
+  text-align: left;
+  padding-left: 75px;
+  line-height: 20px;
+  color: #325eaf;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .jOrgChart .level0 {
+    background-color: #bddbf3;
+  }
+  .jOrgChart .level0 a {
+    font-size: 12px;
+  }
+  .jOrgChart .level0 a .dept {
+    line-height: 30px;
+    height: 40px;
+    color: #ffffff;
+    background-color: #325eaf;
+    border-radius: 4px 4px 0px 0px;
+  }
+  .jOrgChart .level0 a .pic {
+    width: 150px;
+    height: 110px;
+    overflow: hidden;
+  }
+  .jOrgChart .level0 a .pic img {
+    max-width: 100%;
+    height: auto;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .jOrgChart .level0 a .position {
+    text-align: left;
+    padding-left: 0px;
+    line-height: 20px;
+    padding-top: 3px;
+    color: lightcoral;
+    text-align: center;
+  }
+  .jOrgChart .level0 a .name {
+    text-align: left;
+    padding-left: 0px;
+    line-height: 20px;
+    color: #0f1112;
+    font-weight: 500;
+    font-size: 14px;
+    text-align: center;
+  }
+  .jOrgChart .level0 a .count {
+    text-align: left;
+    padding-left: 0px;
+    line-height: 20px;
+    color: #325eaf;
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .jOrgChart .level0 {
+    background-color: #bddbf3;
+  }
+  .jOrgChart .level0 a {
+    font-size: 12px;
+  }
+  .jOrgChart .level0 a .dept {
+    line-height: 40px;
+    height: 40px;
+    color: #ffffff;
+    background-color: #325eaf;
+    border-radius: 4px 4px 0px 0px;
+  }
+  .jOrgChart .level0 a .pic {
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+  }
+  .jOrgChart .level0 a .pic img {
+    max-width: 100%;
+    height: auto;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .jOrgChart .level0 a .position {
+    text-align: left;
+    padding-left: 0px;
+    line-height: 20px;
+    padding-top: 3px;
+    color: lightcoral;
+    text-align: center;
+  }
+  .jOrgChart .level0 a .name {
+    text-align: left;
+    padding-left: 0px;
+    line-height: 20px;
+    color: #0f1112;
+    font-weight: 500;
+    font-size: 14px;
+    text-align: center;
+  }
+  .jOrgChart .level0 a .count {
+    text-align: left;
+    padding-left: 0px;
+    line-height: 20px;
+    color: #325eaf;
+    text-align: center;
+  }
+}
+
+.jOrgChart .level1 {
+  background-color: #ececec;
+}
+
+.jOrgChart .level1 a {
+  font-size: 12px;
+}
+
+.jOrgChart .level1 a .dept {
+  line-height: 25px;
+  color: #ffffff;
+  background-color: #2c7edb;
+  border-radius: 4px 4px 0px 0px;
+}
+
+.jOrgChart .level1 a .pic {
+  float: left;
+  width: 65px;
+  height: 65px;
+  overflow: hidden;
+}
+
+.jOrgChart .level1 a .pic img {
+  max-width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.jOrgChart .level1 a .position {
+  text-align: left;
+  padding-left: 75px;
+  line-height: 20px;
+  padding-top: 3px;
+  color: lightcoral;
+}
+
+.jOrgChart .level1 a .name {
+  text-align: left;
+  padding-left: 75px;
+  line-height: 20px;
+  color: #0f1112;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.jOrgChart .level1 a .count {
+  text-align: left;
+  padding-left: 75px;
+  line-height: 20px;
+  color: #2c7edb;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .jOrgChart .level1 {
+    background-color: #ececec;
+  }
+  .jOrgChart .level1 a {
+    font-size: 12px;
+  }
+  .jOrgChart .level1 a .dept {
+    line-height: 30px;
+    height: 40px;
+    color: #ffffff;
+    background-color: #2c7edb;
+    border-radius: 4px 4px 0px 0px;
+  }
+  .jOrgChart .level1 a .pic {
+    width: 150px;
+    height: 110px;
+    overflow: hidden;
+  }
+  .jOrgChart .level1 a .pic img {
+    max-width: 100%;
+    height: auto;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .jOrgChart .level1 a .position {
+    text-align: left;
+    padding-left: 0px;
+    line-height: 20px;
+    padding-top: 3px;
+    color: lightcoral;
+    text-align: center;
+  }
+  .jOrgChart .level1 a .name {
+    text-align: left;
+    padding-left: 0px;
+    line-height: 20px;
+    color: #0f1112;
+    font-weight: 500;
+    font-size: 14px;
+    text-align: center;
+  }
+  .jOrgChart .level1 a .count {
+    text-align: left;
+    padding-left: 0px;
+    line-height: 20px;
+    color: #2c7edb;
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .jOrgChart .level1 {
+    background-color: #ececec;
+  }
+  .jOrgChart .level1 a {
+    font-size: 12px;
+  }
+  .jOrgChart .level1 a .dept {
+    line-height: 18px;
+    height: 40px;
+    color: #ffffff;
+    background-color: #2c7edb;
+    border-radius: 4px 4px 0px 0px;
+  }
+  .jOrgChart .level1 a .pic {
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+  }
+  .jOrgChart .level1 a .pic img {
+    max-width: 100%;
+    height: auto;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .jOrgChart .level1 a .position {
+    text-align: left;
+    padding-left: 0px;
+    line-height: 20px;
+    padding-top: 3px;
+    color: lightcoral;
+    text-align: center;
+  }
+  .jOrgChart .level1 a .name {
+    text-align: left;
+    padding-left: 0px;
+    line-height: 20px;
+    color: #0f1112;
+    font-weight: 500;
+    font-size: 14px;
+    text-align: center;
+  }
+  .jOrgChart .level1 a .count {
+    text-align: left;
+    padding-left: 0px;
+    line-height: 20px;
+    color: #2c7edb;
+    text-align: center;
+  }
+}
+
+.jOrgChart .level2 {
+  background-color: #ececec;
+}
+
+.jOrgChart .level2 a {
+  font-size: 12px;
+}
+
+.jOrgChart .level2 a .dept {
+  line-height: 25px;
+  color: #ffffff;
+  background-color: #44a1d0;
+  border-radius: 4px 4px 0px 0px;
+}
+
+.jOrgChart .level2 a .pic {
+  float: left;
+  width: 65px;
+  height: 65px;
+  overflow: hidden;
+}
+
+.jOrgChart .level2 a .pic img {
+  max-width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.jOrgChart .level2 a .position {
+  text-align: left;
+  padding-left: 75px;
+  line-height: 20px;
+  padding-top: 3px;
+  color: lightcoral;
+}
+
+.jOrgChart .level2 a .name {
+  text-align: left;
+  padding-left: 75px;
+  line-height: 20px;
+  color: #0f1112;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.jOrgChart .level2 a .count {
+  text-align: left;
+  padding-left: 75px;
+  line-height: 20px;
+  color: #44a1d0;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .jOrgChart .level2 {
+    background-color: #ececec;
+  }
+  .jOrgChart .level2 a {
+    font-size: 12px;
+  }
+  .jOrgChart .level2 a .dept {
+    line-height: 30px;
+    height: 40px;
+    color: #ffffff;
+    background-color: #44a1d0;
+    border-radius: 4px 4px 0px 0px;
+  }
+  .jOrgChart .level2 a .pic {
+    width: 150px;
+    height: 110px;
+    overflow: hidden;
+  }
+  .jOrgChart .level2 a .pic img {
+    max-width: 100%;
+    height: auto;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .jOrgChart .level2 a .position {
+    text-align: left;
+    padding-left: 0px;
+    line-height: 20px;
+    padding-top: 3px;
+    color: lightcoral;
+    text-align: center;
+  }
+  .jOrgChart .level2 a .name {
+    text-align: left;
+    padding-left: 0px;
+    line-height: 20px;
+    color: #0f1112;
+    font-weight: 500;
+    font-size: 14px;
+    text-align: center;
+  }
+  .jOrgChart .level2 a .count {
+    text-align: left;
+    padding-left: 0px;
+    line-height: 20px;
+    color: #44a1d0;
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .jOrgChart .level2 {
+    background-color: #ececec;
+  }
+  .jOrgChart .level2 a {
+    font-size: 12px;
+  }
+  .jOrgChart .level2 a .dept {
+    line-height: 40px;
+    height: 40px;
+    color: #ffffff;
+    background-color: #44a1d0;
+    border-radius: 4px 4px 0px 0px;
+  }
+  .jOrgChart .level2 a .pic {
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+  }
+  .jOrgChart .level2 a .pic img {
+    max-width: 100%;
+    height: auto;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .jOrgChart .level2 a .position {
+    text-align: left;
+    padding-left: 0px;
+    line-height: 20px;
+    padding-top: 3px;
+    color: lightcoral;
+    text-align: center;
+  }
+  .jOrgChart .level2 a .name {
+    text-align: left;
+    padding-left: 0px;
+    line-height: 20px;
+    color: #0f1112;
+    font-weight: 500;
+    font-size: 14px;
+    text-align: center;
+  }
+  .jOrgChart .level2 a .count {
+    text-align: left;
+    padding-left: 0px;
+    line-height: 20px;
+    color: #44a1d0;
+    text-align: center;
+  }
+}
+
+.jOrgChart .level5 {
+  height: 60px;
+  border-left: 4px solid #FFCC01;
+  overflow: hidden;
+}
+
+.jOrgChart .level5 a {
+  font-size: 12px;
+}
+
+.jOrgChart .level5 a .pic {
+  float: left;
+  width: 60px;
+  overflow: hidden;
+}
+
+.jOrgChart .level5 a .pic img {
+  max-width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .jOrgChart .level5 a .pic {
+    width: 60px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .jOrgChart .level5 a .pic {
+    display: none;
+  }
+}
+
+.jOrgChart .level5 a .position {
+  text-align: left;
+  padding-left: 75px;
+  line-height: 12px;
+  padding-top: 10px;
+  color: lightcoral;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px), only screen and (max-width: 767px) {
+  .jOrgChart .level5 a .position {
+    text-align: left;
+    padding-left: 10px;
+    line-height: 12px;
+  }
+}
+
+.jOrgChart .level5 a .name {
+  text-align: left;
+  padding-left: 75px;
+  line-height: 25px;
+  color: #5a5a5a;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px), only screen and (max-width: 767px) {
+  .jOrgChart .level5 a .name {
+    text-align: left;
+    padding-left: 10px;
+    line-height: 25px;
+  }
+}
+
+.jOrgChart ul {
+  display: inherit;
+}
+
+.jOrgChart ul li:first-child {
+  margin-top: 0px;
+}
+
+.jOrgChart ul li {
+  margin-top: 5px;
 }
 /*# sourceMappingURL=style.css.map */

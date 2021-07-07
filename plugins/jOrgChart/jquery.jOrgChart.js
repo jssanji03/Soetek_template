@@ -12,7 +12,7 @@
  *
  */
 (function($) {
-
+  
   $.fn.jOrgChart = function(options) {
     var opts = $.extend({}, $.fn.jOrgChart.defaults, options);
     var $appendTo = $(opts.chartElement);
@@ -32,7 +32,7 @@
     if(opts.dragAndDrop){
         $('div.node').draggable({
             cursor      : 'move',
-            distance    : 40,
+            distance    : 90,
             helper      : 'clone',
             opacity     : 0.8,
             revert      : 'invalid',
@@ -111,11 +111,15 @@
     // Construct the node container(s)
     var $nodeRow = $("<tr/>").addClass("node-cells");
     var $nodeCell = $("<td/>").addClass("node-cell").attr("colspan", 2);
-    var $childNodes = $node.children("ul:first").children("li");
+    // var $childNodes = $node.children("ul:first").children("li");
+    var $childNodes = $node.children("ul:first").children("li").not(".level5");
+    var $lastNodes = $node.children("ul:first").children("li").filter(".level5");
     var $nodeDiv;
-    
     if($childNodes.length > 1) {
       $nodeCell.attr("colspan", $childNodes.length * 2);
+    }
+    if($lastNodes.length > 1) {
+      $nodeCell.attr("colspan", 2);
     }
     // Draw the node
     // Get the contents - any markup except li and ul allowed
@@ -131,15 +135,16 @@
   	$nodeDiv = $("<div>").addClass("node")
                                      .data("tree-node", nodeCount)
                                      .append($nodeContent);
-
+                                     
     // Expand and contract nodes
     if ($childNodes.length > 0) {
-      $nodeDiv.click(function() {
+      $nodeDiv.click(function (e) {
+        console.log(e.target);
           var $this = $(this);
           var $tr = $this.closest("tr");
 
           if($tr.hasClass('contracted')){
-            $this.css({'cursor':'n-resize','background-color':''});
+            $this.find(".dept").css({'cursor':'n-resize','background-color':''});
             $tr.removeClass('contracted').addClass('expanded');
             $tr.nextAll("tr").css('visibility', '');
 
@@ -147,7 +152,7 @@
             // maintain their appearance
             $node.removeClass('collapsed');
           }else{
-            $this.css({'cursor':'n-resize','background-color':'#f79c00'});
+            $this.find(".dept").css({'cursor':'n-resize','background-color':'#f79c00'});
             $tr.removeClass('expanded').addClass('contracted');
             $tr.nextAll("tr").css('visibility', 'hidden');
 
@@ -155,12 +160,36 @@
           }
         });
     }
-    
+    if ($lastNodes.length > 0) {
+      $nodeDiv.click(function (e) {
+        console.log(e.target);
+          var $this = $(this);
+          var $tr = $this.closest("tr");
+          var $ul = $this.closest("ul");
+
+          if($tr.hasClass('contracted')){
+            $this.find(".dept").css({'cursor':'n-resize','background-color':''});
+            $tr.removeClass('contracted').addClass('expanded');
+            $tr.nextAll("tr").css('visibility', '');
+
+            // Update the <li> appropriately so that if the tree redraws collapsed/non-collapsed nodes
+            // maintain their appearance
+            $node.removeClass('collapsed');
+          }else{
+            $this.find(".dept").css({'cursor':'n-resize','background-color':'#f79c00'});
+            $tr.removeClass('expanded').addClass('contracted');
+            $tr.nextAll("tr").css('visibility', 'hidden');
+
+            $node.addClass('collapsed');
+          }
+        });
+    }
     $nodeCell.append($nodeDiv);
     $nodeRow.append($nodeCell);
     $tbody.append($nodeRow);
 
     if($childNodes.length > 0) {
+      
       // if it can be expanded then change the cursor
       $nodeDiv.css('cursor','n-resize');
     
@@ -203,6 +232,49 @@
       }
       $tbody.append($childNodesRow);
     }
+    if($lastNodes.length > 0) {
+      
+      // if it can be expanded then change the cursor
+      $nodeDiv.css('cursor','n-resize');
+    
+      // recurse until leaves found (-1) or to the level specified
+      if(opts.depth == -1 || (level+1 < opts.depth)) { 
+        var $downLineRow = $("<tr/>");
+        var $downLineCell = $("<td/>");
+        $downLineRow.append($downLineCell);
+        
+        // draw the connecting line from the parent node to the horizontal line 
+        $downLine = $("<div></div>").addClass("line down");
+        $downLineCell.append($downLine);
+        $tbody.append($downLineRow);
+
+        // Draw the horizontal lines
+        var $linesRow = $("<tr/>");
+        var $last = $("<div></div>").addClass("line down");
+        // var $right = $("<td>&nbsp;</td>").addClass("line right top");
+        $linesRow.append($last);
+
+        // horizontal line shouldn't extend beyond the first and last child branches
+        // $linesRow.find("td:first")
+        //             .removeClass("top")
+        //          .end()
+        //          .find("td:last")
+        //             .removeClass("top");
+
+        $tbody.append($linesRow);
+
+        var $childlinesRow = $("<tr/>");
+        var $childNodesRow = $("<ul/>");
+        $lastNodes.each(function() {
+           var $li = $("<li class='node-container'/>");
+           // recurse through children lists and items
+           buildNode($(this), $li, level+1, opts);
+           $childNodesRow.append($li);
+        });
+        $childlinesRow.append($childNodesRow)
+      }
+      $tbody.append($childlinesRow);
+    }
 
     // any classes on the LI element get copied to the relevant node in the tree
     // apart from the special 'collapsed' class, which collapses the sub-tree at this point
@@ -225,10 +297,10 @@
     $appendTo.append($table);
     
     /* Prevent trees collapsing if a link inside a node is clicked */
-    $nodeDiv.children('a').click(function(e){
-        console.log(e);
-        e.stopPropagation();
-    });
+    // $nodeDiv.children('div').click(function(e){
+    //     console.log(e.target);
+    //     e.stopPropagation();
+    // });
   };
 
 })(jQuery);
