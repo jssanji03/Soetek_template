@@ -1215,6 +1215,13 @@ table.dataTable .assignActive {
   }
 }
 
+.card {
+  width: 100%;
+  -webkit-box-shadow: 1px 1px 2px 1px rgba(148, 148, 148, 0.37);
+          box-shadow: 1px 1px 2px 1px rgba(148, 148, 148, 0.37);
+  margin-top: 10px;
+}
+
 body {
   font-family: "Noto Sans TC", sans-serif;
   font-size: 15px;
@@ -1229,12 +1236,6 @@ label {
   * {
     -webkit-print-color-adjust: exact !important;
   }
-}
-
-.card {
-  -webkit-box-shadow: 1px 1px 2px 1px rgba(148, 148, 148, 0.37);
-          box-shadow: 1px 1px 2px 1px rgba(148, 148, 148, 0.37);
-  margin-top: 10px;
 }
 
 h1,
