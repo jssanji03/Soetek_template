@@ -1,2 +1,1 @@
 # Soetek_template
-# EtherWan
