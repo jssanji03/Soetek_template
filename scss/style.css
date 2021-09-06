@@ -16,6 +16,10 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900");
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500&display=swap");
+.white {
+  color: #ffffff !important;
+}
+
 #page-content-wrapper section:first-of-type {
   margin-top: 10px;
 }
@@ -115,6 +119,10 @@
 
 .pt-30 {
   padding-top: 30px;
+}
+
+.lh-50 {
+  line-height: 50px;
 }
 
 .btn-submit {
@@ -664,7 +672,7 @@ table.dataTable .assignActive {
 }
 
 .InputArea .card .card-body {
-  height: 370px !important;
+  height: 300px !important;
 }
 
 .in-redline {
@@ -1229,6 +1237,7 @@ body {
 }
 
 label {
+  margin-top: 5px;
   margin-bottom: 2px;
 }
 
@@ -1286,7 +1295,7 @@ img {
 
 .form-group {
   margin: 0px;
-  margin-top: 5px;
+  margin-top: 10px;
 }
 
 .form-control {
@@ -1321,6 +1330,10 @@ input:disabled {
   opacity: 0.3;
   -webkit-text-fill-color: #666;
   -webkit-opacity: 1;
+}
+
+.active p {
+  color: #FFF;
 }
 
 .card-calendar {

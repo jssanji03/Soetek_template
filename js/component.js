@@ -68,7 +68,7 @@ $(function () {
     placeholder: "---- 請選擇 ----",
     allowClear: true,
     closeOnSelect: true,
-    allowHtml: true,
+      allowHtml: true,
     });
 });
 

@@ -45,37 +45,14 @@
             <div class="side_logo">
                 <img src="./public/img/logo.png"></img>
             </div>
-            <ul class="navbar-nav">
-                <li class="nav-item"><a href="index.html" class="nav-link"><i class="fa-icon fas fa-home "></i>index</a>
+            <!-- <ul class="navbar-nav">
+                <li class="nav-item"><a href="index.html" class="nav-link">年度專案預算維護</a>
                 </li>
-                <li class="nav-item has-menu"><a class="nav-link"><i class="fa-icon far fa-file"></i>Form<i
-                            class="fas fa-angle-down"></i></a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li class="dropdown-item"><a href="form.html">General Form</a></li>
-                        <li class="dropdown-item"><a href="form2.html">Table</a></li>
-                    </ul>
+                <li class="nav-item"><a href="summernote.html" class="nav-link">專案預算執行</a>
                 </li>
-                <li class="nav-item"><a href="summernote.html" class="nav-link"><i class="fa-icon fas fa-edit"></i>SummerNote</a>
+                <li class="nav-item"><a href="summernote.html" class="nav-link">專案任務維護</a>
                 </li>
-                <li class="nav-item has-menu"><a href="#" class="nav-link"><i class="fa-icon fas fa-chart-line"></i>Chart<i
-                            class="fas fa-angle-down"></i></a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li class="dropdown-item"><a href="chart.html">Chart</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item has-menu"><a href="#" class="nav-link"><i class="fa-icon fas fa-sign-in-alt"></i>Layout<i
-                            class="fas fa-angle-down"></i></a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li class="dropdown-item"><a href="login.html">Login</a></li>
-                        <li class="dropdown-item"><a href="login2.html">Login2</a></li>
-                        <li class="dropdown-item"><a href="logout.html">Logout</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item"><a href="organization.html" class="nav-link"><i class="fa-icon fas fa-sitemap"></i>公司組織圖</a>
-                </li>
-                <li class="nav-item"><a href="profile.html" class="nav-link"><i class="fa-icon fas fa-id-card"></i>Profile</a>
-                </li>
-            </ul>
+            </ul> -->
         </div>
         <!-- /#sidebar-wrapper -->
     
@@ -87,378 +64,797 @@
                 <button class="navbar-toggler d-lg-block d-none " id="menu-lg-toggle"><i class="fas fa-bars"></i></button>
                 <button class="navbar-toggler d-lg-none d-block" id="menu-laptop-toggle"><i class="fas fa-bars"></i></button>
                 
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="nav justify-content-end">
-                        <li class="nav-item"><i class="far fa-calendar-alt pr-2"></i><a href="calendar.html">日曆</a></li>
-                        <li class="nav-item dropdown dropdown-toggle"><i class="fas fa-cog"></i>
-                            <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                <li class="dropdown-item" href="#">option1</li>
-                                <li class="dropdown-item" href="#">option2</li>
-                            </ul>
-                        </li>
-                        <li class="nav-item" id="color-menu-toggle"><i class="fas fa-palette"></i></li>
-                    </ul>
-                </div> 
             </nav>
             <!-- Navbar End -->
     
             <!-- ##### Section Start ##### -->
-            <!-- ##### Search Start ##### -->
-            <section class="container-fluid SearchBar" id="SearchBar">
-                <div class="accordion" id="accordionExample">
-                    <div class="card">
-                        <div class="card-header" id="headingOne">
-                            <div class="row align-items-center ">
-                                <div class="mb-0 col-12">
-                                    <button class="btn-collapse" type="button" data-toggle="collapse" data-target="#collapseOne"
-                                        aria-expanded="false" aria-controls="collapseOne">
-                                        Search
-                                        <i class="fas fa-chevron-down float-right"></i>
-                                    </button>
-                                </div>
+            <section class="process">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-xl-3 col-12">
+                            <ul class="nav justify-content-start d-xl-none" id="myTab" role="tablist">
+                                <li class="nav-item me-4" role="presentation">
+                                    <a class="a-link active" data-bs-toggle="tab" data-bs-target="#process1" role="tab">排程1</a>
+                                </li>
+                                <li class="nav-item me-4" role="presentation">
+                                    <a class="a-link " data-bs-toggle="tab" data-bs-target="#process2" role="tab">排程2</a>
+                                </li>
+                                <li class="nav-item me-4" role="presentation">
+                                    <a class="a-link " data-bs-toggle="tab" data-bs-target="#process3" role="tab">排程3</a>
+                                </li>
+                                <li class="nav-item me-4" role="presentation">
+                                    <a class="a-link " data-bs-toggle="tab" data-bs-target="#process4" role="tab">排程4</a>
+                                </li>
+                                <li class="nav-item me-4" role="presentation">
+                                    <a class="a-link " data-bs-toggle="tab" data-bs-target="#process5" role="tab">排程5</a>
+                                </li>
+                            </ul>
+                            <div class="list-group d-none d-xl-block ">
+                                <a href="#" class="list-group-item list-group-item-action active" aria-current="true"
+                                    data-bs-toggle="tab" data-bs-target="#process1" role="tab">
+                                    <p class="d-flex justify-content-between align-items-center">年度專案預算維護
+                                        <!-- <span class="badge bg-primary rounded-pill">14</span> -->
+                                    </p>
+                                </a>
+                                <a class="list-group-item list-group-item-action " data-bs-toggle="tab" data-bs-target="#process2"
+                                    role="tab">
+                                    <p class="d-flex justify-content-between align-items-center">專案預算執行
+                                        <!-- <span class="badge bg-success rounded-pill">5</span> -->
+                                    </p>
+                                </a>
+                                <a class="list-group-item list-group-item-action " data-bs-toggle="tab" data-bs-target="#process3"
+                                    role="tab">
+                                    <p class="d-flex justify-content-between align-items-center">專案任務維護
+                                        <!-- <span class="badge bg-warning rounded-pill">3</span> -->
+                                    </p>
+                                </a>
                             </div>
                         </div>
-                        <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
-                            <div class="card-body component">
-                                <form class="p-0 m-0 container-fluid">
-                                    <fieldset>
-                                        <div class="form-row">
-                                            <div class="form-group col-lg-3 col-md-6 col-12">
-                                                <label class="col-12">來電日期:</label>
-                                                <input class="form-control-sm" name="dateTimesPick" type="text" style="width: 100%;"
-                                                    placeholder="2021/03/01">
+                        <div class="col-xl-9  col-12 mt-lg-0 mt-4">
+                            <div class="tab-content">
+                                <section class="tab-pane fade show active" role="tabpanel" id="process1">
+                                    <div class="d-flex justify-content-between">
+                                        <h4 class="primary">年度專案預算維護</h4>
+                                    </div>
+                                    <hr>
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="card p-2">
+                                                <table class="table table-striped table-bordered text-center" style="width: 100%;">
+                                                <thead class="table-dark">
+                                                    <tr>
+                                                        <th scope="col"  >部門</th>
+                                                        <th scope="col">專案類型</th>
+                                                        <th scope="col">專案代碼</th>
+                                                        <th scope="col">專案名稱</th>
+                                                        <th scope="col">計畫天數</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td scope="row">
+                                                            <div class="form-group col-12">
+                                                                <div class="col-12 p-0">
+                                                                    <select class="singleSelect form-control-sm" style="width: 100%;">
+                                                                        <optgroup>
+                                                                            <option value="1">CS</option>
+                                                                            <option value="2">TD</option>
+                                                                            <option value="3">SMB</option>
+                                                                        </optgroup>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            EA
+                                                        </td>
+                                                        <td>
+                                                            <div class="col-12 p-0">
+                                                                <select class="sel singleSelect form-control-sm" style="width: 100%;">
+                                                                    <optgroup>
+                                                                        <option value="1" selected>EA-01</option>
+                                                                        <option value="2">EA-02</option>
+                                                                        <option value="3">ID-01</option>
+                                                                        <option value="4">ID-02</option>
+                                                                        <option value="5">IA-01</option>
+                                                                        <option value="6">IA-02</option>
+                                                                        <option value="7">IC-01</option>
+                                                                        <option value="8">IC-02</option>
+                                                                    </optgroup>
+                                                                </select>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="col-12 p-0">
+                                                                <select class="sel2 singleSelect form-control-sm" style="width: 100%;">
+                                                                    <optgroup>
+                                                                        <option selected>2022 CS外部專案</option>
+                                                                        <option>MA專案</option>
+                                                                        <option>MA專案-協銷</option>
+                                                                        <option>2022 CS 協銷專案</option>
+                                                                        <option>部門內經營管理-產業研究</option>
+                                                                        <option>MA專案-ISO 27001</option>
+                                                                        <option>2022教育訓練</option>
+                                                                        <option>FIORI 研究</option>
+                                                                    </optgroup>
+                                                                </select>
+                                                            </div>
+                                                        </td>
+                                                        <td>2000</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td scope="row">
+                                                            <div class="form-group col-12">
+                                                                <div class="col-12 p-0">
+                                                                    <select class="singleSelect form-control-sm" style="width: 100%;">
+                                                                        <optgroup>
+                                                                            <option value="1">CS</option>
+                                                                            <option value="2">TD</option>
+                                                                            <option value="3">SMB</option>
+                                                                        </optgroup>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            EA
+                                                        </td>
+                                                        <td>
+                                                            <div class="col-12 p-0">
+                                                                <select class="sel singleSelect form-control-sm" style="width: 100%;">
+                                                                    <optgroup>
+                                                                        <option value="1">EA-01</option>
+                                                                        <option value="2" selected>EA-02</option>
+                                                                        <option value="3">ID-01</option>
+                                                                        <option value="4">ID-02</option>
+                                                                        <option value="5">IA-01</option>
+                                                                        <option value="6">IA-02</option>
+                                                                        <option value="7">IC-01</option>
+                                                                        <option value="8">IC-02</option>
+                                                                    </optgroup>
+                                                                </select>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="col-12 p-0">
+                                                                <select class="sel2 singleSelect form-control-sm" style="width: 100%;">
+                                                                    <optgroup>
+                                                                        <option>2022 CS外部專案</option>
+                                                                        <option selected>MA專案</option>
+                                                                        <option>MA專案-協銷</option>
+                                                                        <option>2022 CS 協銷專案</option>
+                                                                        <option>部門內經營管理-產業研究</option>
+                                                                        <option>MA專案-ISO 27001</option>
+                                                                        <option>2022教育訓練</option>
+                                                                        <option>FIORI 研究</option>
+                                                                    </optgroup>
+                                                                </select>
+                                                            </div>
+                                                        </td>
+                                                        <td>1800</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td scope="row">
+                                                            <div class="form-group col-12">
+                                                                <div class="col-12 p-0">
+                                                                    <select class="singleSelect form-control-sm" style="width: 100%;">
+                                                                        <optgroup>
+                                                                            <option value="1">CS</option>
+                                                                            <option value="2">TD</option>
+                                                                            <option value="3">SMB</option>
+                                                                        </optgroup>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            ID
+                                                        </td>
+                                                        <td>
+                                                            <div class="col-12 p-0">
+                                                                <select class="sel singleSelect form-control-sm" style="width: 100%;">
+                                                                    <optgroup>
+                                                                        <option value="1">EA-01</option>
+                                                                        <option value="2">EA-02</option>
+                                                                        <option value="3" selected>ID-01</option>
+                                                                        <option value="4">ID-02</option>
+                                                                        <option value="5">IA-01</option>
+                                                                        <option value="6">IA-02</option>
+                                                                        <option value="7">IC-01</option>
+                                                                        <option value="8">IC-02</option>
+                                                                    </optgroup>
+                                                                </select>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="col-12 p-0">
+                                                                <select class="sel2 singleSelect form-control-sm" style="width: 100%;">
+                                                                    <optgroup>
+                                                                        <option>2022 CS外部專案</option>
+                                                                        <option>MA專案</option>
+                                                                        <option selected>MA專案-協銷</option>
+                                                                        <option>2022 CS 協銷專案</option>
+                                                                        <option>部門內經營管理-產業研究</option>
+                                                                        <option>MA專案-ISO 27001</option>
+                                                                        <option>2022教育訓練</option>
+                                                                        <option>FIORI 研究</option>
+                                                                    </optgroup>
+                                                                </select>
+                                                            </div>
+                                                        </td>
+                                                        <td>2300</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td scope="row">
+                                                            <div class="form-group col-12">
+                                                                <div class="col-12 p-0">
+                                                                    <select class="singleSelect form-control-sm" style="width: 100%;">
+                                                                        <optgroup>
+                                                                            <option value="1">CS</option>
+                                                                            <option value="2">TD</option>
+                                                                            <option value="3">SMB</option>
+                                                                        </optgroup>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            ID
+                                                        </td>
+                                                        <td>
+                                                            <div class="col-12 p-0">
+                                                                <select class="sel singleSelect form-control-sm" style="width: 100%;">
+                                                                    <optgroup>
+                                                                        <option value="1">EA-01</option>
+                                                                        <option value="2">EA-02</option>
+                                                                        <option value="3">ID-01</option>
+                                                                        <option value="4" selected>ID-02</option>
+                                                                        <option value="5">IA-01</option>
+                                                                        <option value="6">IA-02</option>
+                                                                        <option value="7">IC-01</option>
+                                                                        <option value="8">IC-02</option>
+                                                                    </optgroup>
+                                                                </select>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="col-12 p-0">
+                                                                <select class="sel2 singleSelect form-control-sm" style="width: 100%;">
+                                                                    <optgroup>
+                                                                        <option>2022 CS外部專案</option>
+                                                                        <option>MA專案</option>
+                                                                        <option>MA專案-協銷</option>
+                                                                        <option selected>2022 CS 協銷專案</option>
+                                                                        <option>部門內經營管理-產業研究</option>
+                                                                        <option>MA專案-ISO 27001</option>
+                                                                        <option>2022教育訓練</option>
+                                                                        <option>FIORI 研究</option>
+                                                                    </optgroup>
+                                                                </select>
+                                                            </div>
+                                                        </td>
+                                                        <td>500</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td scope="row">
+                                                            <div class="form-group col-12">
+                                                                <div class="col-12 p-0">
+                                                                    <select class="singleSelect form-control-sm" style="width: 100%;">
+                                                                        <optgroup>
+                                                                            <option value="1">CS</option>
+                                                                            <option value="2">TD</option>
+                                                                            <option value="3">SMB</option>
+                                                                        </optgroup>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            IA
+                                                        </td>
+                                                        <td>
+                                                            <div class="col-12 p-0">
+                                                                <select class="sel singleSelect form-control-sm" style="width: 100%;">
+                                                                    <optgroup>
+                                                                        <option value="1">EA-01</option>
+                                                                        <option value="2">EA-02</option>
+                                                                        <option value="3">ID-01</option>
+                                                                        <option value="4">ID-02</option>
+                                                                        <option value="5" selected>IA-01</option>
+                                                                        <option value="6">IA-02</option>
+                                                                        <option value="7">IC-01</option>
+                                                                        <option value="8">IC-02</option>
+                                                                    </optgroup>
+                                                                </select>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="col-12 p-0">
+                                                                <select class="sel2 singleSelect form-control-sm" style="width: 100%;">
+                                                                    <optgroup>
+                                                                        <option>2022 CS外部專案</option>
+                                                                        <option>MA專案</option>
+                                                                        <option>MA專案-協銷</option>
+                                                                        <option>2022 CS 協銷專案</option>
+                                                                        <option selected>部門內經營管理-產業研究</option>
+                                                                        <option>MA專案-ISO 27001</option>
+                                                                        <option>2022教育訓練</option>
+                                                                        <option>FIORI 研究</option>
+                                                                    </optgroup>
+                                                                </select>
+                                                            </div>
+                                                        </td>
+                                                        <td>100</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td scope="row">
+                                                            <div class="form-group col-12">
+                                                                <div class="col-12 p-0">
+                                                                    <select class="singleSelect form-control-sm" style="width: 100%;">
+                                                                        <optgroup>
+                                                                            <option value="1">CS</option>
+                                                                            <option value="2">TD</option>
+                                                                            <option value="3">SMB</option>
+                                                                        </optgroup>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            IA
+                                                        </td>
+                                                        <td>
+                                                            <div class="col-12 p-0">
+                                                                <select class="sel singleSelect form-control-sm" style="width: 100%;">
+                                                                    <optgroup>
+                                                                        <option value="1">EA-01</option>
+                                                                        <option value="2">EA-02</option>
+                                                                        <option value="3">ID-01</option>
+                                                                        <option value="4">ID-02</option>
+                                                                        <option value="5">IA-01</option>
+                                                                        <option value="6" selected>IA-02</option>
+                                                                        <option value="7">IC-01</option>
+                                                                        <option value="8">IC-02</option>
+                                                                    </optgroup>
+                                                                </select>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="col-12 p-0">
+                                                                <select class="sel2 singleSelect form-control-sm" style="width: 100%;">
+                                                                    <optgroup>
+                                                                        <option>2022 CS外部專案</option>
+                                                                        <option>MA專案</option>
+                                                                        <option>MA專案-協銷</option>
+                                                                        <option>2022 CS 協銷專案</option>
+                                                                        <option>部門內經營管理-產業研究</option>
+                                                                        <option selected>MA專案-ISO 27001</option>
+                                                                        <option>2022教育訓練</option>
+                                                                        <option>FIORI 研究</option>
+                                                                    </optgroup>
+                                                                </select>
+                                                            </div>
+                                                        </td>
+                                                        <td>300</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td scope="row">
+                                                            <div class="form-group col-12">
+                                                                <div class="col-12 p-0">
+                                                                    <select class="singleSelect form-control-sm" style="width: 100%;">
+                                                                        <optgroup>
+                                                                            <option value="1">CS</option>
+                                                                            <option value="2">TD</option>
+                                                                            <option value="3">SMB</option>
+                                                                        </optgroup>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            IC
+                                                        </td>
+                                                        <td>
+                                                            <div class="col-12 p-0">
+                                                                <select class="sel singleSelect form-control-sm" style="width: 100%;">
+                                                                    <optgroup>
+                                                                        <option value="1">EA-01</option>
+                                                                        <option value="2">EA-02</option>
+                                                                        <option value="3">ID-01</option>
+                                                                        <option value="4">ID-02</option>
+                                                                        <option value="5">IA-01</option>
+                                                                        <option value="6">IA-02</option>
+                                                                        <option value="7" selected>IC-01</option>
+                                                                        <option value="8">IC-02</option>
+                                                                    </optgroup>
+                                                                </select>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="col-12 p-0">
+                                                                <select class="sel2 singleSelect form-control-sm" style="width: 100%;">
+                                                                    <optgroup>
+                                                                        <option>2022 CS外部專案</option>
+                                                                        <option>MA專案</option>
+                                                                        <option>MA專案-協銷</option>
+                                                                        <option>2022 CS 協銷專案</option>
+                                                                        <option>部門內經營管理-產業研究</option>
+                                                                        <option>MA專案-ISO 27001</option>
+                                                                        <option selected>2022教育訓練</option>
+                                                                        <option>FIORI 研究</option>
+                                                                    </optgroup>
+                                                                </select>
+                                                            </div>
+                                                        </td>
+                                                        <td>500</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td scope="row">
+                                                            <div class="form-group col-12">
+                                                                <div class="col-12 p-0">
+                                                                    <select class="singleSelect form-control-sm" style="width: 100%;">
+                                                                        <optgroup>
+                                                                            <option value="1">CS</option>
+                                                                            <option value="2">TD</option>
+                                                                            <option value="3">SMB</option>
+                                                                        </optgroup>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            IC
+                                                        </td>
+                                                        <td>
+                                                            <div class="col-12 p-0">
+                                                                <select class="sel singleSelect form-control-sm" style="width: 100%;">
+                                                                    <optgroup>
+                                                                        <option value="1">EA-01</option>
+                                                                        <option value="2">EA-02</option>
+                                                                        <option value="3">ID-01</option>
+                                                                        <option value="4">ID-02</option>
+                                                                        <option value="5">IA-01</option>
+                                                                        <option value="6">IA-02</option>
+                                                                        <option value="7">IC-01</option>
+                                                                        <option value="8" selected>IC-02</option>
+                                                                    </optgroup>
+                                                                </select>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="col-12 p-0">
+                                                                <select class="sel2 singleSelect form-control-sm" style="width: 100%;">
+                                                                    <optgroup>
+                                                                        <option>2022 CS外部專案</option>
+                                                                        <option>MA專案</option>
+                                                                        <option>MA專案-協銷</option>
+                                                                        <option>2022 CS 協銷專案</option>
+                                                                        <option>部門內經營管理-產業研究</option>
+                                                                        <option>MA專案-ISO 27001</option>
+                                                                        <option>2022教育訓練</option>
+                                                                        <option selected>FIORI 研究</option>
+                                                                    </optgroup>
+                                                                </select>
+                                                            </div>
+                                                        </td>
+                                                        <td>150</td>
+                                                    </tr>
+                                                </tbody>
+                                                </table>
                                             </div>
-                                            <!--  部門  -->
-                                            <div class="form-group  col-lg-3 col-md-6 col-12">
-                                                <label class="col-12">部門:</label>
+                                        </div>
+                                    </div>
+                                </section>
+                                <section class="tab-pane fade " role="tabpanel" id="process2">
+                                    <div class="d-flex justify-content-between">
+                                        <h4>專案預算執行</h4>
+                                        <button type="button" class="btn btn-padding btn-sm">存檔</button>
+                                    </div>
+                                    <hr>
+                                    <div class="card p-3">
+
+                                        <div class="form-row">
+                                            <div class="form-group col-6">
+                                                <label>專案代碼:</label>
                                                 <div class="col-12 p-0">
-                                                    <select class="singleSelect form-control-sm"
-                                                        style="width: 100%;">
+                                                    <select class="sel singleSelect form-control-sm" style="width: 100%;">
+                                                        <optgroup>
+                                                            <option value="1" selected>EA-01</option>
+                                                            <option value="2">EA-02</option>
+                                                            <option value="3">ID-01</option>
+                                                            <option value="4">ID-02</option>
+                                                            <option value="5">IA-01</option>
+                                                            <option value="6">IA-02</option>
+                                                            <option value="7">IC-01</option>
+                                                            <option value="8">IC-02</option>
+                                                        </optgroup>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="form-group col-6">
+                                                <div class="col-12 p-0">
+                                                    <label></label>
+                                                    <select class="singleSelect form-control-sm" style="width: 100%;">
                                                         <option></option>
                                                         <optgroup>
-                                                            <option value="1">E1</option>
-                                                            <option value="2">E2</option>
-                                                            <option value="3">E3</option>
+                                                            <option selected>2022 CS外部專案</option>
+                                                            <option>MA專案</option>
+                                                            <option>MA專案-協銷</option>
+                                                            <option>2022 CS 協銷專案</option>
+                                                            <option>部門內經營管理-產業研究</option>
+                                                            <option>MA專案-ISO 27001</option>
+                                                            <option>2022教育訓練</option>
+                                                            <option>FIORI 研究</option>
                                                         </optgroup>
                                                     </select>
                                                 </div>
                                             </div>
-                                            <!--  客戶  -->
-                                            <div class="form-group col-lg-3 col-md-6 col-12">
-                                                <label class="col-12">客戶名稱:</label>
+                                            <div class="form-group col-6">
                                                 <div class="col-12 p-0">
-                                                    <select class="singleSelect form-control-sm"
-                                                        style="width: 100%;">
+                                                    <label>撥補類型:</label>
+                                                    <select class="singleSelect form-control-sm" style="width: 100%;">
                                                         <option></option>
                                                         <optgroup>
-                                                            <option value="1">AD20</option>
-                                                            <option value="2">AD30</option>
-                                                            <option value="3">AD40</option>
+                                                            <option selected>P</option>
+                                                            <option>E</option>
+                                                            <option>T</option>
+                                                            <option>P</option>
                                                         </optgroup>
                                                     </select>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <!--  地址 magicsuggest plugins  -->
-                                        <div class="form-row">
-                                            <div class="form-group col-12">
+                                            <div class="form-group col-6">
                                                 <div class="col-12 p-0">
-                                                    <label class="col-12">地址:</label>
-                                                    <input class="form-control-sm searchAddress" style="width: 100%;">
-                                                    </input>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- 機種 / 機械號碼 / 合約類型 -->
-                                        <div class="form-row">
-                                            <!-- 機種 -->
-                                            <div class="form-group col-lg-3 col-md-6 col-12">
-                                                <label class="col-12">機種:</label>
-                                                <div class="col-12 p-0">
-                                                    <select class="singleSelect form-control-sm"
-                                                        style="width: 100%;">
+                                                    <label>EventNo:</label>
+                                                    <select class="singleSelect form-control-sm" style="width: 100%;">
                                                         <option></option>
-                                                        <optgroup label="分類1">
-                                                            <option value="1">E1</option>
-                                                            <option value="2">E2</option>
-                                                            <option value="3">E3</option>
+                                                        <optgroup>
+                                                            <option selected>09</option>
+                                                            <option>10</option>
+                                                            <option>11</option>
+                                                            <option>12</option>
+                                                            <option>E21090001</option>
+                                                            <option>E21090002</option>
+                                                            <option>E21090003</option>
+                                                            <option>P21090001</option>
+                                                            <option>P21090002</option>
+                                                            <option>P21090003</option>
                                                         </optgroup>
                                                     </select>
                                                 </div>
                                             </div>
-                                            <!--  機械號碼  -->
-                                            <div class="form-group col-lg-3 col-md-6 col-12">
-                                                <label class="col-12">機械號碼:</label>
+                                            <div class="form-group col-6">
                                                 <div class="col-12 p-0">
-                                                    <select class="singleSelect form-control-sm"
-                                                        style="width: 100%;">
+                                                    <label>員工代碼:</label>
+                                                    <select class="singleSelect form-control-sm" style="width: 100%;">
                                                         <option></option>
-                                                        <optgroup label="Group 1">
-                                                            <option value="1">E1</option>
-                                                            <option value="2">E2</option>
-                                                            <option value="3">E3</option>
-                                                        </optgroup>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                            <!--  合約類型  -->
-                                            <div class="form-group col-lg-3 col-md-6 col-12">
-                                                <label class="col-12">合約類型:</label>
-                                                <div class="col-12 p-0">
-                                                    <input class="form-control-sm" type="text" style="width: 100%;"
-                                                        placeholder="合約類型">
-                                                </div>
-                                            </div>
-                                            <!--  錯誤碼  -->
-                                            <div class="form-group col-lg-3 col-md-6 col-12">
-                                                <label class="col-12">錯誤碼:</label>
-                                                <div class="col-12 p-0">
-                                                    <select multiple="multiple"
-                                                        class="multipleSelect"
-                                                        style="width: 100%;">
-                                                        <optgroup label="Group 2">
-                                                            <option value="4">A10</option>
-                                                            <option value="5">A11</option>
-                                                            <option value="6">A12</option>
+                                                        <optgroup>
+                                                            <option >1050701 Hannah</option>
+                                                            <option>1080403 Diana</option>
+                                                            <option>1051201 CindyLee</option>
+                                                            <option>1061104 LisaWang</option>
+                                                            <option>1070501 RennisLiu</option>
+                                                            <option>1000101 JohnChou</option>
+                                                            <option>1070502 Duke</option>
+                                                            <option>1080405 Queenie</option>
                                                         </optgroup>
                                                     </select>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="form-row">
-                                            <!--  故障內容  -->
-                                            <div class="form-group col-lg-12">
-                                                <label class="col-12" for="fixedArea">故障內容:</label>
-                                                <textarea class="form-control col-12" id="fixedArea" cols=10 rows="4"
-                                                    maxlength="700" onKeyDown="checkMaxInput()"
-                                                    onKeyUp="checkMaxInput()"></textarea>
-                                                <span style="font-size: 10px;">字數限制：</span><span style="font-size: 10px;"
-                                                    id="wordsNum" size=3 maxlength=3 value="700">0/700</span>
+                                    
+                                    <hr>
+                                    <div class="col-12">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                            <label class="col-12">
+                                                <table class="table table-striped table-bordered text-center" style="width: 100%;">
+                                                    <thead class="table-dark">
+                                                        <tr>
+                                                            <th scope="col">指派人員</th>
+                                                            <th scope="col">名稱</th>
+                                                            <th scope="col">天數</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td scope="row">
+                                                                <div class="form-group col-12">
+                                                                    <select class="singleSelect form-control-sm" style="width: 100%;">
+                                                                        <optgroup>
+                                                                            <option selected>1050701 Hannah</option>
+                                                                            <option>1080403 Diana</option>
+                                                                            <option>1051201 CindyLee</option>
+                                                                            <option>1061104 LisaWang</option>
+                                                                            <option>1070501 RennisLiu</option>
+                                                                            <option>1000101 JohnChou</option>
+                                                                            <option>1070502 Duke</option>
+                                                                            <option>1080405 Queenie</option>
+                                                                        </optgroup>
+                                                                    </select>
+                                                                </div>
+                                                            </td>
+                                                            <td class="lh-50">
+                                                                Hannah
+                                                            </td>
+                                                            <td class="lh-50">20</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td scope="row">
+                                                                <div class="form-group col-12">
+                                                                    <select class="singleSelect form-control-sm" style="width: 100%;">
+                                                                        <optgroup>
+                                                                            <option>1050701 Hannah</option>
+                                                                            <option selected>1080403 Diana</option>
+                                                                            <option>1051201 CindyLee</option>
+                                                                            <option>1061104 LisaWang</option>
+                                                                            <option>1070501 RennisLiu</option>
+                                                                            <option>1000101 JohnChou</option>
+                                                                            <option>1070502 Duke</option>
+                                                                            <option>1080405 Queenie</option>
+                                                                        </optgroup>
+                                                                    </select>
+                                                                </div>
+                                                            </td>
+                                                            <td class="lh-50">
+                                                                Diana
+                                                            </td>
+                                                            <td class="lh-50">5</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                            <label class="row">
+                                                <div class="form-group col-6">
+                                                    <label>專案代碼:</label>
+                                                    <div class="col-12 p-0">
+                                                        <select class="sel singleSelect form-control-sm" style="width: 100%;">
+                                                            <optgroup>
+                                                                <option value="1" selected>EA-01</option>
+                                                                <option value="2">EA-02</option>
+                                                                <option value="3">ID-01</option>
+                                                                <option value="4">ID-02</option>
+                                                                <option value="5">IA-01</option>
+                                                                <option value="6">IA-02</option>
+                                                                <option value="7">IC-01</option>
+                                                                <option value="8">IC-02</option>
+                                                            </optgroup>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group col-6">
+                                                    <div class="col-12 p-0">
+                                                        <label></label>
+                                                        <select class="singleSelect form-control-sm" style="width: 100%;">
+                                                            <option></option>
+                                                            <optgroup>
+                                                                <option selected>2022 CS外部專案</option>
+                                                                <option>MA專案</option>
+                                                                <option>MA專案-協銷</option>
+                                                                <option>2022 CS 協銷專案</option>
+                                                                <option>部門內經營管理-產業研究</option>
+                                                                <option>MA專案-ISO 27001</option>
+                                                                <option>2022教育訓練</option>
+                                                                <option>FIORI 研究</option>
+                                                            </optgroup>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    </div>
+                                </section>
+                                <section class="tab-pane fade" role="tabpanel" id="process3">
+                                    <div class="d-flex justify-content-between">
+                                        <h4>專案任務維護</h4>
+                                        <button type="button" class="btn btn-padding btn-sm">存檔</button>
+                                    </div>
+                                    <hr>
+                                    <div class="card py-3">
+                                        <div class="form-group row">
+                                            <div class="col-6 ">
+                                                <label>專案代碼：</label>
+                                                <select class="singleSelect form-control-sm" style="width: 100%;">
+                                                    <option></option>
+                                                    <optgroup>
+                                                        <option >EA-01 2022 CS外部專案</option>
+                                                        <option selected>EA-02 MA專案</option>
+                                                        <option>ID-01 MA專案-協銷</option>
+                                                        <option>ID-02 2022 CS 協銷專案</option>
+                                                        <option>IA-01 部門內經營管理-產業研究</option>
+                                                        <option>IA-02 MA專案-ISO 27001</option>
+                                                        <option>IC-01 2022教育訓練</option>
+                                                        <option>IC-02 FIORI 研究</option>
+                                                    </optgroup>
+                                                </select>
+                                            </div>
+                                            <div class="col-6"></div>
+                                            <div class="col-6">
+                                                <label>EventNo：</label>
+                                                <select class="singleSelect form-control-sm" style="width: 100%;">
+                                                    <option></option>
+                                                    <optgroup>
+                                                        <option>E</option>
+                                                        <option>P</option>
+                                                    </optgroup>
+                                                </select>
+                                            </div>
+                                            <div class="col-6">
+                                                <label>EventType：</label>
+                                                <input class="form-control form-control-sm" type="text" value="P21090001">
+                                            </div>
+                                            <div class="col-6">
+                                                <label>EventName：</label>
+                                                <input class="form-control form-control-sm" type="text" value="進銷存報表Zxxxx問題">
+                                            </div>
+                                            <div class="col-6">
+                                                <label>計劃人天：</label>
+                                                <input class="form-control form-control-sm" type="text" value="3">
                                             </div>
                                         </div>
-                                        <div class="form-row">
-                                            <!--  售服類型  -->
-                                            <div class="form-group col-lg-3 col-md-6 col-12">
-                                                <label class="col-12">售服類型:</label>
+                                        <div class="form-group row mt-4">
+                                            <div class="col-6">
                                                 <div class="col-12 p-0">
-                                                    <select class="singleSelect form-control-sm"
-                                                        style="width: 100%;">
+                                                    <label>員工代碼:</label>
+                                                    <select class="singleSelect form-control-sm" style="width: 100%;">
                                                         <option></option>
-                                                        <optgroup label="Group 1">
-                                                            <option value="1">E1</option>
-                                                            <option value="2">E2</option>
-                                                            <option value="3">E3</option>
+                                                        <optgroup>
+                                                            <option>1050701 Hannah</option>
+                                                            <option>1080403 Diana</option>
+                                                            <option>1051201 CindyLee</option>
+                                                            <option>1061104 LisaWang</option>
+                                                            <option>1070501 RennisLiu</option>
+                                                            <option>1000101 JohnChou</option>
+                                                            <option>1070502 Duke</option>
+                                                            <option>1080405 Queenie</option>
                                                         </optgroup>
                                                     </select>
                                                 </div>
                                             </div>
-                                            <!--  建議解決方法  -->
-                                            <div class="form-group col-lg-3 col-md-6 col-12">
-                                                <label class="col-12">建議解決方法:</label>
-                                                <div class="col-12 p-0">
-                                                    <select class="singleSelect form-control-sm"
-                                                        style="width: 100%;">
-                                                        <option></option>
-                                                        <optgroup label="Group 1">
-                                                            <option value="1">E1</option>
-                                                            <option value="2">E2</option>
-                                                            <option value="3">E3</option>
-                                                        </optgroup>
-                                                    </select>
-                                                </div>
+                                            <div class="col-6"></div>
+                                            <div class="col-6">
+                                                <label>預計開始日：</label>
+                                                <input class="form-control form-control-sm" name="dateTimesPick" type="text" value="2021/09/03">
                                             </div>
-                                            <div class="form-group col-lg-3 col-md-6 col-12">
-                                                <label class="col-12">建議解決方法:</label>
-                                                <div class="col-12 p-0">
-                                                    <a href="#" class="alink">建議解決方法</a>
-                                                </div>
+                                            <div class="col-6">
+                                                <label>預計完成日：</label>
+                                                <input class="form-control form-control-sm" name="dateTimesPick" type="text" value="2021/09/03">
                                             </div>
-                                            <!--  故障內容  -->
-                                            <div class="form-group col-lg-12">
-                                                <label class="col-12" for="exampleFormControlTextarea1">建議解決方法
-                                                    其他:</label>
-                                                <textarea class="form-control col-12" id="exampleFormControlTextarea1"
-                                                    rows="4"></textarea>
+                                            <div class="col-6">
+                                                <label>商機代碼：</label>
+                                                <select class="singleSelect form-control-sm" style="width: 100%;">
+                                                    <option></option>
+                                                    <optgroup>
+                                                        <option>TSMT-台表科</option>
+                                                        <option>SPORTSGEAR-志強</option>
+                                                    </optgroup>
+                                                </select>
+                                            </div>
+                                            <div class="col-12">
+                                                <label>備註：</label>
+                                                <textarea class="form-control fixedArea" cols=10 rows="4" maxlength="700" style="width: 100%;"></textarea>
                                             </div>
                                         </div>
-                                    </fieldset>
-                                </form>
-                            </div>
-                            <div class="card-footer text-center vbutton ">
-                                <button type="submit" class="btn btn-submit ml-5">搜尋</button>
+                                    </div>
+                                </section>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
-            <!-- ##### Search End ##### -->
 
             <!-- ##### Table Start ##### -->
-            <section id="List">
-                <div class="container-fluid">
-                    <!-- <button class="btn btn-sm btn-success" onclick="printDiv()">Print</button> -->
-                    <table class="nowrap listDataTable" style="width:100%">
-                        <thead>
-                            <tr class="tr-only-hide">
-                                <th rowspan="2">部門</th>
-                                <th rowspan="2">指派人員</th>
-                                <th rowspan="2">工程人員</th>
-                                <th rowspan="2">客戶</th>
-                                <th rowspan="2">地址</th>
-                                <th rowspan="2">機種</th>
-                                <th rowspan="2">錯誤碼</th>
-                                <th>故障內容​</th>
-                                <th>​</th>
-                                <th>售服狀態​</th>
-                                <th>報告書​</th>
-                                <th>動作</th>
-                            </tr>
-                            <tr class="tr-only-hide">
-                                <th>機種</th>
-                                <th>錯誤碼</th>
-                                <th>故障內容​</th>
-                                <th>故障內容​</th>
-                                <th>故障內容​</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                                <tr>
-                                    <td data-th="部門">E1</td>
-                                    <td data-th="指派人員">王小明</td>
-                                    <td data-th="工程人員">陳大華</td>
-                                    <td data-th="客戶">[C00121A-TA]</td>
-                                    <td data-th="地址">台中市大甲區日南里東三街10號</td>
-                                    <td data-th="機種">ML3015LVP-40CF</td>
-                                    <td data-th="錯誤碼">1</td>
-                                    <td data-th="故障內容​">拆機1</td>
-                                    <td data-th="服務日期​">1</td>
-                                    <td data-th="售服狀態​">指派</td>
-                                    <td data-th="報告書​"></td>
-                                    <td data-th="動作">
-                                        <select id="inputState" class="assignActive" name="pageselect" onchange="self.location.href=options[selectedIndex].value">
-                                            <option value="" selected> ---請選擇--- </option>
-                                            <option value="fixedItems_read.html">檢視</option>
-                                            <option value="assignTo.html">指派</option>
-                                            <option value="fixItems.html">維修單</option>
-                                        </select>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td data-th="部門">E2</td>
-                                    <td data-th="指派人員">王小華</td>
-                                    <td data-th="工程人員">陳大華</td>
-                                    <td data-th="客戶">[C00121A-TA]</td>
-                                    <td data-th="地址">台中市大甲區日南里東三街10號</td>
-                                    <td data-th="機種">ML3015LVP-40CF</td>
-                                    <td data-th="錯誤碼">2</td>
-                                    <td data-th="故障內容​">拆機2</td>
-                                    <td data-th="服務日期​">2</td>
-                                    <td data-th="售服狀態​">指派</td>
-                                    <td data-th="報告書​"></td>
-                                    <td data-th="動作">
-                                        <select id="inputState" class="assignActive" name="pageselect"
-                                            onchange="self.location.href=options[selectedIndex].value">
-                                            <option value="" selected> ---請選擇--- </option>
-                                            <option value="fixedItems_read.html">檢視</option>
-                                            <option value="assignTo.html">指派</option>
-                                            <option value="fixItems.html">維修單</option>
-                                        </select>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td data-th="部門">E3</td>
-                                    <td data-th="指派人員">王小明</td>
-                                    <td data-th="工程人員">陳大華</td>
-                                    <td data-th="客戶">[C00121A-TA]</td>
-                                    <td data-th="地址">台中市大甲區日南里東三街10號</td>
-                                    <td data-th="機種">ML3015LVP-40CF</td>
-                                    <td data-th="錯誤碼">3</td>
-                                    <td data-th="故障內容​">拆機3</td>
-                                    <td data-th="服務日期​">3</td>
-                                    <td data-th="售服狀態​">指派</td>
-                                    <td data-th="報告書​"></td>
-                                    <td data-th="動作">
-                                        <select id="inputState" class="assignActive" name="pageselect"
-                                            onchange="self.location.href=options[selectedIndex].value">
-                                            <option value="" selected> ---請選擇--- </option>
-                                            <option value="fixedItems_read.html">檢視</option>
-                                            <option value="assignTo.html">指派</option>
-                                            <option value="fixItems.html">維修單</option>
-                                        </select>
-                                    </td>
-                                </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </section>
             <section class="container-fluid TableArea">
                 <div class="row">
                     <div class="col-12">
-                        <div class="card" id="input2">
-                            <div class="card-header">
-                                清單
-                            </div>
-                            <div class="card-body">
-                                <table class="nowrap table-gray" style="width: 100%;">
-                                    <thead>
-                                        <tr>
-                                            <th scope="col" style="width:10%">時間</th>
-                                            <th scope="col">員工</th>
-                                            <th scope="col">地址</th>
-                                            <th scope="col">商品圖片</th>
-                                            <th scope="col">日期</th>
-                                            <th scope="col">狀態</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td scope="row">2021/01/01</td>
-                                            <td>Mark</td>
-                                            <td>台中市大甲區日南里東三街10號</td>
-                                            <td><img src="./public/img/iphone.png" width="20px" class="showPic" data-toggle="modal"
-                                                    data-target="#pic-Modal"></td>
-                                            <td>Otto</td>
-                                            <td>Otto</td>
-                                        </tr>
-                                        <tr>
-                                            <td scope="row">2021/01/01</td>
-                                            <td>Jacob</td>
-                                            <td>台中市大甲區日南里東三街10號</td>
-                                            <td><img src="./public/img/iphone.png" width="20px" class="showPic" data-toggle="modal"
-                                                    data-target="#pic-Modal"></td>
-                                            <td>Thornton</td>
-                                            <td>Thornton</td>
-                                        </tr>
-                                        <tr>
-                                            <td scope="row">2021/01/01</td>
-                                            <td>Larry</td>
-                                            <td>台中市大甲區日南里東三街10號</td>
-                                            <td><img src="./public/img/iphone.png" width="20px" class="showPic" data-toggle="modal"
-                                                    data-target="#pic-Modal"></td>
-                                            <td>the Bird</td>
-                                            <td>the Bird</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
+                        
                     </div>
                 </div>
             </section>
-            <!-- Modal -->
-            <div class="modal fade" id="pic-Modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
-                aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered" role="document">
-                    <div class="modal-content ">
-                        <div class="modal-body">
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                            <img src="" class="showMaxPic">
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
         <!-- /#page-content-wrapper -->
     </div>
@@ -471,8 +867,9 @@
     <!-- jQuery-3.5.1 js -->
     <script src="./plugins/jquery/jquery-3.5.1.min.js"></script>
     <!-- Bootstrap js -->
-    <script src="./plugins/bootstrap/js/bootstrap.min.js"></script>
-    <script src="./plugins/bootstrap/js/popper.min.js"></script>
+    <script src="./plugins/bootstrap-5.0.0-dist/js/bootstrap.bundle.min.js"></script>
+    <!-- <script src="./plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script src="./plugins/bootstrap/js/popper.min.js"></script> -->
     <script src="./plugins/select2/js/select2.min.js"></script>
     <script src="./plugins/Magicsuggest/js/magicsuggest-min.js"></script>
     <!-- DataTables -->
@@ -494,7 +891,79 @@
     <!-- Active js -->
     <script src="js/sidebar.js"></script>
     <script src="js/component.js"></script>
-
+    <script>
+        $(".sel").change(function () {
+                switch (parseInt($(this).val())) {
+                    case 0:
+                        $(".sel2 option").remove();
+                        break;
+                    case 1:
+                        $(".sel2 option").remove();
+                        var array = ["2022 CS外部專案"];
+                        //利用each遍歷array中的值並將每個值新增到Select中
+                        $.each(array, function (i, val) {
+                            $(".sel2").append($("<option value='" + array + "'>" + array + "</option>"));
+                        });
+                        break;
+                    case 2:
+                        $(".sel2 option").remove();
+                        var array = ["MA專案"];
+                        //利用each遍歷array中的值並將每個值新增到Select中
+                        $.each(array, function (i, val) {
+                            $(".sel2").append($(`<option value= ${array[i]}>${array[i]}</option>`));
+                        });
+                        break;
+                    case 3:
+                        $(".sel2 option").remove();
+                        var array = ["MA專案-協銷"];
+                        //利用each遍歷array中的值並將每個值新增到Select中
+                        $.each(array, function (i, val) {
+                            $(".sel2").append($(`<option value= ${array[i]}>${array[i]}</option>`));
+                        });
+                        break;
+                    case 4:
+                        $(".sel2 option").remove();
+                        var array = ["2022 CS 協銷專案"];
+                        //利用each遍歷array中的值並將每個值新增到Select中
+                        $.each(array, function (i, val) {
+                            $(".sel2").append($(`<option value= ${array[i]}>${array[i]}</option>`));
+                        });
+                        break;
+                    case 5:
+                        $(".sel2 option").remove();
+                        var array = ["部門內經營管理-產業研究"];
+                        //利用each遍歷array中的值並將每個值新增到Select中
+                        $.each(array, function (i, val) {
+                            $(".sel2").append($(`<option value= ${array[i]}>${array[i]}</option>`));
+                        });
+                        break;
+                    case 6:
+                        $(".sel2 option").remove();
+                        var array = ["MA專案-ISO 27001"];
+                        //利用each遍歷array中的值並將每個值新增到Select中
+                        $.each(array, function (i, val) {
+                            $(".sel2").append($(`<option value= ${array[i]}>${array[i]}</option>`));
+                        });
+                        break;
+                    case 7:
+                        $(".sel2 option").remove();
+                        var array = ["2022教育訓練"];
+                        //利用each遍歷array中的值並將每個值新增到Select中
+                        $.each(array, function (i, val) {
+                            $(".sel2").append($(`<option value= ${array[i]}>${array[i]}</option>`));
+                        });
+                        break;
+                    case 8:
+                        $(".sel2 option").remove();
+                        var array = ["FIORI 研究"];
+                        //利用each遍歷array中的值並將每個值新增到Select中
+                        $.each(array, function (i, val) {
+                            $(".sel2").append($(`<option value= ${array[i]}>${array[i]}</option>`));
+                        });
+                        break;
+                }
+            });
+    </script>
   
 
 </body>
