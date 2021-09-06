@@ -20,14 +20,6 @@
   color: #ffffff !important;
 }
 
-#page-content-wrapper section:first-of-type {
-  margin-top: 10px;
-}
-
-#page-content-wrapper section:not(:first-of-type) {
-  margin-top: 20px;
-}
-
 .mt-15 {
   margin-top: 15px !important;
 }
@@ -1333,6 +1325,10 @@ input:disabled {
 
 .active p {
   color: #FFF;
+}
+
+.table td {
+  vertical-align: middle;
 }
 
 .card-calendar {
