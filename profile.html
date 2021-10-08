@@ -86,11 +86,9 @@
             <!-- Navbar Start -->
             <nav class="navbar navbar-expand-lg border-bottom" id="topNav">
                 <div class="logo"></div>
-                <button class="navbar-toggler d-lg-block d-none " id="menu-lg-toggle"><i
-                        class="fas fa-bars"></i></button>
-                <button class="navbar-toggler d-lg-none d-block" id="menu-laptop-toggle"><i
-                        class="fas fa-bars"></i></button>
-
+                <button class="navbar-toggler d-lg-block d-none " id="menu-lg-toggle"><i class="fas fa-bars"></i></button>
+                <button class="navbar-toggler d-lg-none d-block" id="menu-laptop-toggle"><i class="fas fa-bars"></i></button>
+                
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="nav justify-content-end">
                         <li class="nav-item"><i class="far fa-calendar-alt pr-2"></i><a href="calendar.html">日曆</a></li>
@@ -105,52 +103,189 @@
                 </div>
             </nav>
             <!-- Navbar End -->
-
+        
             <!-- ##### Section Start ##### -->
-            <section class="container-fluid">
-                <div class="row page_title">
-                    <h2 class="col-6">Profile</h2>
-                    <nav aria-label="breadcrumb" class="col-6">
-                        <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="index.html">首頁</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">Profile</li>
-                        </ol>
-                    </nav>
+            <section class="page_title">
+                <div class="container-fluid">
+                    <div class="row">
+                        <h2 class="col-6">Profile</h2>
+                        <nav class="breadcrumb col-6 justify-content-end">
+                            <ol class="d-flex">
+                                <li class="breadcrumb-item"><a href="index.html">首頁</a></li>
+                                <li class="breadcrumb-item active">Profile</li>
+                            </ol>
+                        </nav>
+                    </div>
                 </div>
             </section>
-            <section class="container-fluid">
-                <div class="row">
-                    <!-- Profile Image -->
-                    <div class="card ">
-                        <div class="card-body box-profile">
-                            <div class="row">
-                                <div class="col-3">
-                                    <div class="text-center">
-                                        <img class="profile-user-img img-fluid img-circle" src="./public/img/organization/user03.jpeg"
-                                            alt="User profile picture">
-                                    </div>
-                                </div>
-                                <div class="col-9">
-                                    <h3 class="profile-username text-left">Nina Mcintire</h3>
-                                    <p class="text-muted text-left">Software Engineer</p>
-                                    <ul class="list-group list-group-unbordered mb-3">
-                                        <li class="list-group-item">
-                                            <b>Followers</b> <a class="float-right">1,322</a>
-                                        </li>
-                                        <li class="list-group-item">
-                                            <b>Following</b> <a class="float-right">543</a>
-                                        </li>
-                                        <li class="list-group-item">
-                                            <b>Friends</b> <a class="float-right">13,287</a>
-                                        </li>
-                                    </ul>
+            <section>
+                <div class="container-fluid">
+                    <div class="row px-3">
+                        <div class="d-md-flex d-block card-noShadow bg-blue30 justify-content-between align-items-center">
+                            <div class=" col-md-2 col-12 ">
+                                <div class="text-center">
+                                    <img class="img-circle img-sm" src="./public/img/organization/user01.jpeg"
+                                        alt="User profile picture">
                                 </div>
                             </div>
+                            <div class="col-md-8 col-12 text-md-start text-center">
+                                <p class="hover ">Dept.</p>
+                                <h3 class="primary">Nina Mcintire</h3>
+                                <p class="secondary">Software Engineer</p>
+                                <ul class="mt-3">
+                                    <li>
+                                        <p>
+                                            <i class="fas fa-envelope pr-10"></i>
+                                            abc1234@gmail.com
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p>
+                                            <i class="fab fa-line pr-10"></i>
+                                            abc1234
+                                        </p>
+                                    </li>
+            
+                                </ul>
+                            </div>
                         </div>
-                        <!-- /.card-body -->
                     </div>
                     <!-- /.card -->
+                    <div class="row mt-50">
+                        <div class="col-lg-3 col-12">
+                            <div class="card p-3">
+                                <ul class="mt-3">
+                                    <li>
+                                        <p class="pink border-b border-pink">Work</p>
+                                        <h4 class="mt-3 secondary">Software Engineer</h4>
+                                        <p class="text mt-2 lh-30">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                                            Consequuntur adipisci, necessitatibus velit iste, eaque</p>
+                                        <h4 class="mt-4 secondary">Software Engineer</h4>
+                                        <p class="text mt-2 lh-30">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                                            Consequuntur adipisci, necessitatibus velit iste, eaque</p>
+                                    </li>
+                                    <li class="mt-5">
+                                        <p class="pink border-b border-pink">Skill</p>
+                                        <ol class="lh-30 mt-3 text">
+                                            <li>Branding</li>
+                                            <li>UI / UX</li>
+                                            <li>Web - Design</li>
+                                            <li>Packaging</li>
+                                        </ol>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-9 col-12 mt-lg-0 mt-5">
+                            <main class="container">
+                                <ul class="nav justify-content-start border-bottom" id="myTab" role="tablist">
+                                    <li class="nav-item me-4" role="presentation">
+                                        <a class="a-link active" id="about-tab" data-bs-toggle="tab" data-bs-target="#about"
+                                            type="button" role="tab">About</a>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <a class="a-link" id="timeline-tab" data-bs-toggle="tab" data-bs-target="#timeline"
+                                            type="button" role="tab">TimeLine</a>
+                                    </li>
+                                </ul>
+                            </main>
+                            <article class="d-flex tab">
+                                <div class="tab-content">
+                                    <section class="tab-pane fade show active" role="tabpanel" aria-labelledby="home-tab"
+                                        id="about">
+                                        <ul class="p-3">
+                                            <li class="row">
+                                                <p class="col-3 lh-40">姓名</p>
+                                                <p class="col-9 lh-40">Jack</p>
+                                            </li>
+                                            <li class="row">
+                                                <p class="col-3 lh-40">部門</p>
+                                                <p class="col-9 lh-40">Develop dept.</p>
+                                            </li>
+                                            <li class="row">
+                                                <p class="col-3 lh-40">職位</p>
+                                                <p class="col-9 lh-40">Manager</p>
+                                            </li>
+                                            <li class="row">
+                                                <p class="col-3 lh-40">職稱</p>
+                                                <p class="col-9 lh-40">Software Engineer</p>
+                                            </li>
+                                            <li class="row">
+                                                <p class="col-3 lh-40">Email</p>
+                                                <p class="col-9 lh-40">jerome.clement@example.com</p>
+                                            </li>
+                                            <li class="row">
+                                                <p class="col-3 lh-40">Phone</p>
+                                                <p class="col-9 lh-40">077 857 10 09</p>
+                                            </li>
+                                            <li class="row">
+                                                <p class="col-3 lh-40">Address</p>
+                                                <p class="col-9 lh-40">Châtillon (Ju) Graubünden Switzerland 6560</p>
+                                            </li>
+                                            <hr>
+                                            <li class="row">
+                                                <p class="col-3 lh-40">Line ID</p>
+                                                <p class="col-9 lh-40">Châtillon</p>
+                                            </li>
+                                            <li class="row">
+                                                <p class="col-3 lh-40">FaceBook</p>
+                                                <p class="col-9 lh-40">Châtillon</p>
+                                            </li>
+                                        </ul>
+                                    </section>
+                                    <section class="timeline tab-pane fade p-2" role="tabpanel" aria-labelledby="home-tab"
+                                        id="timeline">
+                                        <ul class="mt-3 time_line">
+                                            <li class="row">
+                                                <div class="col-2 position-relative">
+                                                    <i class="fas fa-archive circle-s fz-20 bg_primary"></i>
+                                                </div>
+                                                <div class="col-10">
+                                                    <div class="card p-3">
+                                                        <h4 class="primary">Lorem ipsum</h4>
+                                                        <p class="mt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                                            Fugiat obcaecati eveniet vel fugit minima saepe enim hic esse,
+                                                            voluptatibus incidunt eius commodi placeat quo dolorum, voluptate
+                                                            praesentium unde dolore qui.</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="row mt-4">
+                                                <div class="col-2 position-relative">
+                                                    <i class="fas fa-archive circle-s bg_secondary "></i>
+                                                </div>
+                                                <div class="col-10">
+                                                    <div class="card p-3">
+                                                        <h4 class="primary">Lorem ipsum</h4>
+                                                        <p class="mt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                                            Fugiat obcaecati eveniet vel fugit minima saepe enim hic esse,
+                                                            voluptatibus incidunt eius commodi placeat quo dolorum, voluptate
+                                                            praesentium unde dolore qui.</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="row mt-4">
+                                                <div class="col-2 position-relative">
+                                                    <i class="fas fa-archive circle-s bg_hover"></i>
+                                                </div>
+                                                <div class="col-10">
+                                                    <div class="card p-3">
+                                                        <h4 class="primary">Lorem ipsum</h4>
+                                                        <p class="mt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                                            Fugiat obcaecati eveniet vel fugit minima saepe enim hic esse,
+                                                            voluptatibus incidunt eius commodi placeat quo dolorum, voluptate
+                                                            praesentium unde dolore qui.</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </section>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
                 </div>
+            
             </section>
         </div>
         <!-- /#page-content-wrapper -->
@@ -164,8 +299,9 @@
     <!-- jQuery-3.5.1 js -->
     <script src="./plugins/jquery/jquery-3.5.1.min.js"></script>
     <!-- Bootstrap js -->
-    <script src="./plugins/bootstrap/js/bootstrap.min.js"></script>
-    <script src="./plugins/bootstrap/js/popper.min.js"></script>
+    <script src="./plugins/bootstrap-5.0.0-dist/js/bootstrap.bundle.min.js"></script>
+    <!-- <script src="./plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script src="./plugins/bootstrap/js/popper.min.js"></script> -->
     <!-- Active js -->
     <script src="js/sidebar.js"></script>
     <script src="js/component.js"></script>

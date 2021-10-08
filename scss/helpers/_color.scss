@@ -1,8 +1,20 @@
 // Primary Color
 $primary: #325eaf;
+.bg_primary{
+    background-color: $primary;
+}
+.primary{
+    color: $primary;
+}
 
 // Secondary Color
 $secondary: #2c7edb;
+.secondary{
+    color: $secondary;
+}
+.bg_secondary{
+    background-color: $secondary;
+}
 
 // Heading Color
 $heading: #8a8a8a;
@@ -16,6 +28,10 @@ $bg-gray: #f2f4f5;
 // Body Background
 $bg-body: #343A40;
 
+
+.bg-blue30{
+    background-color: #ebf8ff;
+}
 
 // White Color
 $white: #ffffff;
@@ -34,6 +50,10 @@ $borderFocus: #44a1d0;
 
 // Hover Color
 $hover: #62c9fc;
+.bg_hover{
+    background-color: $hover;
+}
+
 
 // Light Gray Color
 $lightGray: #b1b1b1;
@@ -43,4 +63,8 @@ $lightBlue:#D9EDF7;
 
 $yellow: #FFCC01;
 
-$red:rgb(233, 74, 74)
+$red:rgb(233, 74, 74);
+$pink:#d31577;
+.pink{
+    color: $pink;
+}
