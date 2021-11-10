@@ -1,0 +1,29 @@
+.ui-state-highlight{
+    height: 30px;
+}
+.stateCard{
+    width: 100%;
+    box-shadow: 1px 1px 2px 1px rgba(148, 148, 148, 0.37);
+    margin-top: 10px;
+    border-radius: 3px;
+    border: 1px solid rgb(189, 189, 189);
+    .pic{
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        overflow: hidden;
+        margin: 5px;
+        img{
+            max-width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+    }
+    .comments{
+        font-size: 12px;
+    }
+    .state{
+        color: rgb(172, 172, 172);
+        font-size: 15px;
+    }
+}

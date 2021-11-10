@@ -184,8 +184,16 @@ table.dataTable{
         }
     }
 }
+table{
+  td{
+    padding: 0px !important;
+  }
+  input{
+    border: none;
+    width: 100%;
+    height:100%;
+    outline: none;
+    background-color: rgba(234, 245, 252, 0)
+  }
+}
 
-@page{
-  // size: landscape; /* 橫向 */
-  size: A4 landscape;  /* 尺寸/保留字 + 方向 */; 
-    }

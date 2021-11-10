@@ -1,7 +1,7 @@
 /* Plugins Master Stylesheet */
 @import url('../plugins/bootstrap-5.0.0-dist/css/bootstrap.min.css');
-// @import url('../plugins/bootstrap/css/bootstrap.min.css');
-@import url('../plugins/jquery/jquery-ui.min.css');
+@import url('../plugins/datatables-select/css/select.bootstrap.min.css');
+@import url('../plugins/jquery-ui/jquery-ui.min.css');
 @import url('../plugins/jOrgChart/jquery.jOrgChart.css');
 @import url('../plugins/fontawesome-free/css/all.min.css');
 @import url('../plugins/select2/css/select2.min.css');
@@ -53,5 +53,6 @@
 @import "pages/login";
 @import "pages/organization";
 @import "pages/profile";
+@import "pages/todoList";
 
 

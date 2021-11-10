@@ -68,8 +68,16 @@ $(function () {
     placeholder: "---- 請選擇 ----",
     allowClear: true,
     closeOnSelect: true,
-      allowHtml: true,
+    allowHtml: true,
+    data: [
+          { id: 1, text: "Blue" },
+          { id: 2, text: "David"},
+          { id: 3, text: "Judy" },
+          { id: 4, text: "Kate" },
+          { id: 5, text: "John" }
+      ],
     });
+    
 });
 
 // #### 複選 Select2 #### //
@@ -78,7 +86,7 @@ $(function () {
     placeholder: "---- 請選擇 ----",
     allowClear: true,
     tags: true,
-    // closeOnSelect: false,
+
   });
 });  
 /////###  End ###/////    
@@ -105,9 +113,7 @@ $(".fixedArea").on('keyup', function () {
 $(".listDataTable").DataTable({
         searching: true,
         "paging": true,
-  "orderCellsTop": true,
-        
-            
+        "orderCellsTop": true,
         // "orderMulti": true,
         "stateSave": true,
         "fnInitComplete": function (settings, json) {  
@@ -177,6 +183,13 @@ $(".listDataTable").DataTable({
             },
             "lengthMenu": "顯示 _MENU_ 筆資料"
         },
+        "keys": {
+          clipboard: true,
+          blurable: true,
+        },
+        select: {
+          style: 'multi',
+        },
         dom: "<'row'<'col-xl-12'fr>>" +
             "<'row'<'col-sm-12'tlp>>",
     }
@@ -197,12 +210,123 @@ $(".listDataTable").DataTable({
                 "next":"下一頁"
             },
             "lengthMenu": "顯示 _MENU_ 筆資料"
-        },
+          },
         dom: "<'row'<'col-xl-12'fr>>" +
             "<'row'<'col-sm-12'tlp>>",
     }
   );
 //## Datatable CSS客製 RWD card - End ##//
+
+//## Datatable Excel  - Start ##//
+// datatable-npm paste excel
+$('.datatable-npm').DataTable({
+        searching: false,
+        "paging": false,
+        "ordering": false,
+        "info": false,
+        "autoWidth": false,
+        "scroller": true,
+        "responsive": false,
+        "scrollX": true,
+        "lengthChange": false,
+        "language": {
+            "decimal": "-",
+            "thousands": ",",
+            "info": "顯示 _PAGE_ 至 _PAGES_",
+            "search": "搜尋 :",
+            "paginate": {
+                "previous": "上一頁",
+                "next":"下一頁"
+            },
+            "lengthMenu": "顯示 _MENU_ 筆資料"
+        },
+        select: {
+          style: 'multi',
+        },
+        dom: "<'row'<'col-xl-12'fr>>" +
+            "<'row'<'col-sm-12'tlp>>",
+    }
+);
+const body = document.body;
+function clearInput(e){
+  switch(e.keyCode){
+    case 8:
+        $(".datatable-npm .selected").find("input").val(" ")
+    break;
+  }
+}
+body.addEventListener('keydown', clearInput ,false) 
+$('.datatable-excel').DataTable({
+        searching: false,
+        "paging": false,
+        "ordering": false,
+        "info": false,
+        "autoWidth": false,
+        "scroller": true,
+        "responsive": false,
+        "scrollX": true,
+        "lengthChange": false,
+        "language": {
+            "decimal": "-",
+            "thousands": ",",
+            "info": "顯示 _PAGE_ 至 _PAGES_",
+            "search": "搜尋 :",
+            "paginate": {
+                "previous": "上一頁",
+                "next":"下一頁"
+            },
+            "lengthMenu": "顯示 _MENU_ 筆資料"
+        },
+        "keys": {
+          clipboard: true,
+          blurable: true,
+        },
+        select: {
+          style: 'multi',
+        },
+        dom: "<'row'<'col-xl-12'fr>>" +
+            "<'row'<'col-sm-12'tlp>>",
+    }
+);
+
+
+// datatable-excel paste excel
+$('.datatable-excel input').on('paste', function(e) {
+  let $this = $(this);
+  $.each(e.originalEvent.clipboardData.items, function (i, v) {
+    if (v.type === 'text/plain') {
+      v.getAsString(function(text) {
+        console.log(text);
+        let x = $this.closest('td').index();
+        let y = $this.closest('tr').index() + 1;
+        text = text.trim('\r\n');
+        $.each(text.split('\r\n'), function(i2, v2) {
+          $.each(v2.split('\t'), function(i3, v3) {
+            let row = y + i2;
+            let col = x + i3;
+            $this.closest('.datatable-excel').find('tr:eq(' + row + ') td:eq(' + col + ') input').val(v3);
+          });
+        });
+        const body = document.body;
+        function clearInput(e){
+          switch(e.keyCode){
+          case 8:
+              $(".datatable-excel .selected").find("input").val(" ")
+          break;
+        }
+        }
+        body.addEventListener('keydown', clearInput ,false) //偵測按下按鍵的行為
+      });
+    } else if (v.type === 'number') {
+      console.log("hi number");
+    }
+  });
+  return false;
+});
+
+
+
+
 /////### Datatable Control End ###/////
 
 
