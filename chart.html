@@ -122,7 +122,8 @@
                                 Pie Chart
                             </div>
                             <div class="card-body">
-                                <canvas id="myChart" width="400" height="200"></canvas>
+                                <div id="chart"></div>
+                                <!-- <canvas  id="myChart" width="400" height="200"></canvas> -->
                                 <table class="table table-bordered mt-3 Chart" style="width: 50%;">
                                     <thead>
                                         <tr>
@@ -132,7 +133,7 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr id=show>
+                                        <tr id="show" class="pieTable">
                                         </tr>
                                     </tbody>
                                 </table>
@@ -208,6 +209,8 @@
     <script src="./plugins/Buttons-1.6.5/js/buttons.html5.min.js"></script>
     <script src="./plugins/Buttons-1.6.5/js/buttons.colVis.min.js"></script>
     <script src="./plugins/JSZip-2.5.0/jszip.min.js"></script>
+    <script src="./plugins/c3-0.7.20/docs/js/d3-5.8.2.min.js"></script>
+    <script src="./plugins/c3-0.7.20/docs/js/c3.min.js"></script>
     <!-- SummerNote -->
     <script src="./plugins/summernote/summernote-bs4.min.js"></script>
     <!-- datepicker -->
@@ -216,7 +219,8 @@
     <!-- Active js -->
     <script src="js/sidebar.js"></script>
     <script src="js/component.js"></script>
-    <script src="js/chart.js"></script>
+    <!-- <script src="js/chart.js"></script> -->
+    <script src="js/c3.js"></script>
 
 
 </body>

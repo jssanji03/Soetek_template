@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAGA,AAAA,QAAQ,AAAA,SAAS,AAAC,CAChB,IAAI,CAAE,OAAO,CACb,SAAS,CAAE,GAAG,CACf",
+    "sources": [
+        "text.scss"
+    ],
+    "names": [],
+    "file": "text.min.css"
+}

@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,SAAS,CAAC,OAAO,AAAC,CAChB,YAAY,CAAE,EAAE,CACjB",
+    "sources": [
+        "brush.scss"
+    ],
+    "names": [],
+    "file": "brush.min.css"
+}

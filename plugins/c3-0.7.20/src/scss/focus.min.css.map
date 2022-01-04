@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,UAAU,AAAA,WAAW,AAAC,CACpB,OAAO,CAAE,CAAC,CACX,AACD,AAAA,UAAU,AAAA,WAAW,CAAC,IAAI,AAAA,QAAQ,CAAE,UAAU,AAAA,WAAW,CAAC,IAAI,AAAA,QAAQ,AAAC,CACrE,YAAY,CAAE,GAAG,CAClB,AACD,AAAA,UAAU,AAAA,aAAa,AAAC,CACtB,OAAO,CAAE,cAAc,CACxB",
+    "sources": [
+        "focus.scss"
+    ],
+    "names": [],
+    "file": "focus.min.css"
+}

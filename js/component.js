@@ -166,39 +166,42 @@ $(".listDataTable").DataTable({
 //## 包含標題與搜尋功能 RWD card - End ##//    
 
 //## Datatable Responsive 套件 - Start ##//
- $('.datatable-RWD').DataTable({
-        searching: true,
-        "paging": true,
-        "ordering": false,
-        "info": true,
-        "autoWidth": false,
-        scroller: true,
-        responsive: true,
-        "language": {
-            "info": "顯示 _PAGE_ 至 _PAGES_",
-            "search": "搜尋 :",
-            "paginate": {
-                "previous": "上一頁",
-                "next":"下一頁"
-            },
-            "lengthMenu": "顯示 _MENU_ 筆資料"
+$('.datatable-RWD').DataTable(
+  {
+    searching: true,
+    "paging": true,
+    "ordering": false,
+    "info": true,
+    "autoWidth": false,
+    scroller: true,
+    responsive: true,
+    "language": {
+        "info": "顯示 _PAGE_ 至 _PAGES_",
+        "search": "搜尋 :",
+        "paginate": {
+            "previous": "上一頁",
+            "next":"下一頁"
         },
-        "keys": {
-          clipboard: true,
-          blurable: true,
-        },
-        select: {
-          style: 'multi',
-        },
-        dom: "<'row'<'col-xl-12'fr>>" +
-            "<'row'<'col-sm-12'tlp>>",
-    }
+        "lengthMenu": "顯示 _MENU_ 筆資料"
+    },
+    "keys": {
+      clipboard: true,
+      blurable: true,
+    },
+    select: {
+      style: 'multi',
+    },
+    dom: "<'row'<'col-xl-12'fr>>" +
+        "<'row'<'col-sm-12'tlp>>",
+  }
  );
 //## Datatable Responsive 套件 - End ##//   
 
 //## Datatable CSS客製 RWD card - Start ##//
   $('.datatable-card,.table-gray').DataTable({
         searching: true,
+        pageLength: 3,
+        // stateSave: true,
         "paging": true,
         "ordering": false,
         "scrollX": true,

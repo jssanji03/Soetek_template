@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,eAAe,AAAC,CACd,SAAS,CAAE,IAAI,CAChB,AACD,AAAA,sBAAsB,AAAC,CACrB,OAAO,CAAE,IAAI,CACd,AAED,AAAA,qBAAqB,AAAC,CACpB,OAAO,CAAE,IAAI,CACb,IAAI,CAAE,KAAK,CACX,MAAM,CAAE,SAAS,CACjB,YAAY,CAAE,CAChB,CAAC",
+    "sources": [
+        "legend.scss"
+    ],
+    "names": [],
+    "file": "legend.min.css"
+}

@@ -27,3 +27,62 @@
         font-size: 15px;
     }
 }
+
+
+
+
+
+// ProgressBar
+.form-progress {
+	position: relative;
+	display: block;
+	// margin: 3rem auto;
+	// width: 100%;
+	// max-width: 400px;
+}
+
+.form-progress-indicator {
+	position: absolute;
+	top: -6px;
+	left: 0;
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+    line-height: 28px;
+	background: white;
+	border: 2px solid #ddd;
+	border-radius: 50%;
+	transition: all .2s ease-in-out;
+	transition-delay: .3s;
+	will-change: transform;
+    text-align: center;
+	
+	&.one	{ left: 0; }
+	&.two 	{ left: 33%; }
+	&.three { left: 66%; }	
+	&.four 	{ left: 96%; }	
+	
+	&.active {
+		animation: bounce .5s forwards;
+		animation-delay: .5s;
+		border-color: $primary;
+		background-color: $primary;
+        color: $white;
+	}
+}
+
+.step-container{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    .form-step{
+        position: absolute;
+        top: 0;
+        &.hidden{
+            display: none;
+        }
+    }
+    // .form-step:not(:first-of-type){
+    //     display: none;
+    // }
+}

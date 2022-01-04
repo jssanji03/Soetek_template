@@ -16,16 +16,24 @@ const showPie = function () {
                     'rgb(54, 162, 235)',
                     'rgb(255, 205, 86)'
                 ],
-                hoverOffset: 4
-            }]
+                // hoverOffset: 4
+            }],
+            
         };
         // console.log(data.datasets[0].data[0]);
         const config = {
             type: 'pie',
             data: data,
+            options: {
+                onClick: (e) => {
+                    const linkPieCanvas = document.querySelector("#myChart")
+                    const canvasPosition = Chart.helpers.getRelativePosition(e);
+                    console.log(canvasPosition);
+                }
+            }
         };
     
-        var myChart = new Chart(
+        const myChart = new Chart(
             $('#myChart'),
             config
         );
@@ -34,6 +42,28 @@ const showPie = function () {
         <td>${data.datasets[0].data[1]}</td>
         <td>${data.datasets[0].data[2]}</td>
         `)
+    
+    const linkPieCanvas = document.querySelector("#myChart")
+    linkPieCanvas.onclick = function (e) {
+        var slice = myChart.getElementAtEvent(e);
+        if (!slice.length) return;
+        
+        var label = slice[0]._model.labels;
+        // console.log(label);
+        switch (label) {
+            // add case for each label/slice
+            case 'Red':
+                alert('clicked on Red');
+                window.open('http://www.google.com');
+                break;
+            case 'Blue':
+                alert('clicked on Blue');
+                window.open('http://www.yahoo.com.tw');
+                break;
+            // add rests ...
+        }
+    }
+
 }
 showPie()
 

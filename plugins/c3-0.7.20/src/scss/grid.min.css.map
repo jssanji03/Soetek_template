@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,QAAQ,CAAC,IAAI,AAAC,CACZ,MAAM,CAAE,IAAI,CACb,AACD,AAAA,QAAQ,CAAC,IAAI,AAAC,CACZ,IAAI,CAAE,IAAI,CACX,AACD,AAAA,SAAS,CAAE,SAAS,AAAC,CACnB,gBAAgB,CAAE,GAAG,CACtB",
+    "sources": [
+        "grid.scss"
+    ],
+    "names": [],
+    "file": "grid.min.css"
+}

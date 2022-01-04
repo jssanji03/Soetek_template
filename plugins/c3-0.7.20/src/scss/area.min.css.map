@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,QAAQ,AAAC,CACP,YAAY,CAAE,CAAC,CACf,OAAO,CAAE,GAAG,CACb",
+    "sources": [
+        "area.scss"
+    ],
+    "names": [],
+    "file": "area.min.css"
+}

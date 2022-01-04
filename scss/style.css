@@ -14,6 +14,7 @@
 @import url("../plugins/daterangepicker-master/daterangepicker.css");
 @import url("../plugins/summernote/summernote-bs4.min.css");
 @import url("../plugins/Responsive-2.2.7/css/responsive.bootstrap.min.css");
+@import url("../plugins/c3-0.7.20/docs/css/c3.min.css");
 /* :: 1.0 Import Fonts */
 @import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900");
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap");
@@ -959,6 +960,10 @@ table input {
 .ChartArea .card-body .Chart thead {
   background-color: #ccc;
   line-height: 15px;
+}
+
+.ChartArea .card-body .Chart td {
+  line-height: 30px;
 }
 
 .btn {
@@ -2606,5 +2611,74 @@ section.page_title {
 .stateCard .state {
   color: #acacac;
   font-size: 15px;
+}
+
+.form-progress {
+  position: relative;
+  display: block;
+}
+
+.form-progress-indicator {
+  position: absolute;
+  top: -6px;
+  left: 0;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  line-height: 28px;
+  background: white;
+  border: 2px solid #ddd;
+  border-radius: 50%;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+  -webkit-transition-delay: .3s;
+          transition-delay: .3s;
+  will-change: transform;
+  text-align: center;
+}
+
+.form-progress-indicator.one {
+  left: 0;
+}
+
+.form-progress-indicator.two {
+  left: 33%;
+}
+
+.form-progress-indicator.three {
+  left: 66%;
+}
+
+.form-progress-indicator.four {
+  left: 96%;
+}
+
+.form-progress-indicator.active {
+  -webkit-animation: bounce .5s forwards;
+          animation: bounce .5s forwards;
+  -webkit-animation-delay: .5s;
+          animation-delay: .5s;
+  border-color: #325eaf;
+  background-color: #325eaf;
+  color: #ffffff;
+}
+
+.step-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+}
+
+.step-container .form-step {
+  position: absolute;
+  top: 0;
+}
+
+.step-container .form-step.hidden {
+  display: none;
 }
 /*# sourceMappingURL=style.css.map */

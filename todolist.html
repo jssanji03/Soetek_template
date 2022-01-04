@@ -9,7 +9,7 @@
     <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
     <!-- Title -->
-    <title>Table</title>
+    <title>ToDoList</title>
 
     <!-- Favicon -->
     <link rel="icon" href="./public/img/core-img/favicon.png">
@@ -108,7 +108,7 @@
             <!-- ##### Section Start ##### -->
             <section class="container-fluid">
                 <div class="row page_title">
-                    <h2 class="col-6">Table</h2>
+                    <h2 class="col-6">ToDoList</h2>
                     <nav aria-label="breadcrumb" class="col-6">
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item"><a href="index.html">首頁</a></li>
@@ -122,11 +122,11 @@
                     <div class="row">
                         <div class="card col p-0 mx-2">
                             <div class="card-header">
-                                <h5 class="card-title">
-                                    Backlog
+                                <h5 class="card-title" data-title="New">
+                                    New
                                 </h5>
                             </div>
-                            <div class="card-body sortable1 connectedSortable" id="newState">
+                            <div class="card-body sortable1 connectedSortable newState" >
                                 <!-- <div class="stateCard card-light card-outline" id="item2">
                                     <div class="card-header">
                                         <h6>item2</h6>
@@ -171,70 +171,31 @@
                         </div>
                         <div class="card col p-0 mx-2">
                             <div class="card-header">
-                                <h5 class="card-title">
-                                    To Do
+                                <h5 class="card-title" data-title="Committed">
+                                    Committed
                                 </h5>
                             </div>
-                            <div class="card-body sortable1 connectedSortable">
-                                <div class="card card-primary card-outline" id="item3">
-                                    <div class="card-header">
-                                        <h5 class="card-title">item3</h5>
-                                        <div class="card-tools">
-                                            <a href="#" class="btn btn-tool btn-link">#5</a>
-                                            <a href="#" class="btn btn-tool">
-                                                <i class="fas fa-pen"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card col p-0 mx-2">
-                            <div class="card-header bg-info">
-                                <h3 class="card-title">
-                                    In Progress
-                                </h3>
-                            </div>
-                            <div class="card-body">
-                                <div class="card card-light card-outline">
-                                    <div class="card-header">
-                                        <h5 class="card-title">Update Readme</h5>
-                                        <div class="card-tools">
-                                            <a href="#" class="btn btn-tool btn-link">#2</a>
-                                            <a href="#" class="btn btn-tool">
-                                                <i class="fas fa-pen"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="card-body">
-                                        <p>
-                                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-                                            Aenean commodo ligula eget dolor. Aenean massa.
-                                            Cum sociis natoque penatibus et magnis dis parturient montes,
-                                            nascetur ridiculus mus.
-                                        </p>
-                                    </div>
-                                </div>
+                            <div class="card-body sortable1 connectedSortable committedState">
+                                
                             </div>
                         </div>
                         <div class="card col p-0 mx-2">
                             <div class="card-header">
-                                <h3 class="card-title">
-                                    Done
-                                </h3>
+                                <h5 class="card-title" data-title="In Progress">
+                                    In Progress
+                                </h5>
                             </div>
-                            <div class="card-body">
-                                <div class="card card-primary card-outline">
-                                    <div class="card-header">
-                                        <h5 class="card-title">Create repo</h5>
-                                        <div class="card-tools">
-                                            <a href="#" class="btn btn-tool btn-link">#1</a>
-                                            <a href="#" class="btn btn-tool">
-                                                <i class="fas fa-pen"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
+                            <div class="card-body sortable1 connectedSortable InProgress">
+                            </div>
+                        </div>
+                        <div class="card col p-0 mx-2">
+                            <div class="card-header">
+                                <h5 class="card-title" data-title="Done">
+                                    Done
+                                </h5>
+                            </div>
+                            <div class="card-body sortable1 connectedSortable doneState">
+                                
                             </div>
                         </div>
                     </div>
