@@ -2712,6 +2712,7 @@ section.page_title {
 .overflow_area {
   width: 60%;
   margin: 0 auto;
+  overflow: hidden;
 }
 
 .overflow_area .form-progress {

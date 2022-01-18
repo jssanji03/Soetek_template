@@ -82,22 +82,21 @@ function updateMenu() {
                     // menu.classList.remove("onPage")
                 }
             })
-            steps.forEach((step, i) => {
+            // steps.forEach((step, i) => {
                 
-                const nowStep = step.style.left
-                const currentStep = step.getAttribute("data-step")
-                let nowStepLeft = Number(nowStep.slice(0, nowStep.length - 1))
-                if (currentMenu == currentStep ) {
-                    step.style.left = 50 + "%"
-                }
-                else if (currentMenu < currentStep) {
-                    step.style.left = ((nowStepLeft += 25)) + "%"
-                    console.log(nowStepLeft);
-                }
-                else {
-                    step.style.left = ((nowStepLeft -= 25)) + "%"
-                }
-            });
+            //     const nowStep = step.style.left
+            //     const currentStep = step.getAttribute("data-step")
+            //     let nowStepLeft = Number(nowStep.slice(0, nowStep.length - 1))
+            //     if (currentMenu == currentStep ) {
+            //         step.style.left = 50 + "%"
+            //     }
+            //     else if (currentMenu < currentStep) {
+            //         step.style.left = ((nowStepLeft += 5)) + "%"
+            //     }
+            //     else {
+            //         step.style.left = ((nowStepLeft -= 5)) + "%"
+            //     }
+            // });
             // const steps = document.querySelectorAll(".form-progress-indicator");
              
         })

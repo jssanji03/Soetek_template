@@ -158,6 +158,17 @@ function updateProgress(element) {
             step.style.left = ((nowStepLeft -= 25)) + "%"
             progressBar.style.width = 50 + "%";
         }
+        // if (i < active) {
+        //     progressBar.style.width = (actives.length) * 25 + '%'
+        //     step.classList.add("actives");
+        // } 
+        // else {
+        //     step.classList.remove("actives");
+        // }
+        // if (active > 3) {
+        //     step.style.left = ((nowStepLeft -= 25)) + "%"
+        //     progressBar.style.width = 50 + "%";
+        // }
     });   
     
 }
