@@ -4,9 +4,39 @@
     margin-top: 10px;
     
 }
-
+.card-Title{
+    color: $primary;
+}
+.card-title{
+    margin: 0px;
+}
+.card-link{
+    color:$primary;
+}
 .card-noShadow{
     border-radius: 10px;
     padding: 20px;
 }
 
+.loading_card{
+    width: 300px;
+    height: 100px;
+    background-color: rgba(123, 182, 179, 0.493);
+    box-shadow: 1px 1px 5px 1px rgba(107, 141, 139, 0.253);
+    position: fixed;
+    right:20px;
+    top:100px;
+    border-radius: 10px;
+    z-index: 999;
+    .btn-close{
+        position: fixed;
+        color: $white;
+        right:25px;
+        top:110px
+    }
+    .loadingGif{
+        // width: 50%;
+        height: 30px;
+        margin: 0 auto;
+    }
+}

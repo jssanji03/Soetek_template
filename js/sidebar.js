@@ -11,7 +11,7 @@ $(function () {
 
 // SideBar dropdown Control ///
 $(function () {
-    $(document).delegate('.nav-link', 'click', function (event) {
+    $(document).delegate('.navbar-nav .nav-link', 'click', function (event) {
         $(this).toggleClass("changColor")
         $(this).parent().children(".dropdown-menu").toggleClass("open");
         $(this).parent().children().find(".fas").toggleClass("fa-angle-up");
@@ -21,13 +21,18 @@ $(function () {
 $(function () {
     var pathname = window.location.pathname;
    $(".navbar-nav li a").each( function() {
-        var href= $(this).attr("href");
-        if (href != undefined && pathname.indexOf(href) >= 0){
+       var href = $(this).attr("href");
+       const parent = $(this).parents("#wrapper")
+        if (href != undefined && pathname.indexOf(href) >= 0 ){
             $(this).addClass("onPage");
             $(this).parents('.has-menu').children('.nav-link').addClass("activePage");
             $(this).filter('.nav-link').addClass("activePage");
-            $(this).parents('.dropdown-menu').addClass("open");
+            // $(this).parents('.dropdown-menu').addClass("open");
         }
+        if (parent.hasClass("toggle")){
+            $(this).parents('.dropdown-menu').removeClass("open");
+        }
+        
     });
 });
 

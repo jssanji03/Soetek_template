@@ -12,7 +12,8 @@ let active = 1;
 
 function init() {
     let stepWidth = 0
-    steps.forEach((step) => {
+    steps.forEach((step, i) => {
+        console.log(i);
         if (step.className == 'form-progress-indicator one actives') {
             step.style.left = 0 + "%"
         } else {
@@ -91,7 +92,7 @@ function updateMenu() {
                     step.style.left = 50 + "%"
                 }
                 else if (currentMenu < currentStep) {
-                    step.style.left = ((nowStepLeft += 25)) + "%"
+                    step.style.left = (nowStepLeft += 25) + "%"
                     console.log(nowStepLeft);
                 }
                 else {

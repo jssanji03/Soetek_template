@@ -42,7 +42,7 @@
   transition: margin .25s ease-out;
   .side_logo {
     margin-top: 5px;
-    width: 100%;
+    width: 70%;
     height: 60px;
   }
   ul{
@@ -114,10 +114,11 @@
   margin-left: 12vw;
   margin-top: 50px;
   width: 88vw;
+  height: 100vh;
   padding: 15px;
    @media #{$breakpoint-xs},#{$breakpoint-md},#{$breakpoint-lg}{
       width: 100vw;
-      height: 100%;
+      height: 100vh;
       overflow: scroll;
       margin-left: 0vw;
   }
@@ -128,7 +129,7 @@
    margin-left: 12vw;
    width: 88vw;
    height: 50px;
-   z-index: 100;
+   z-index: 999;
    background-color: $white;
   @media #{$breakpoint-xs},#{$breakpoint-md},#{$breakpoint-lg}{
     width: 100vw;
@@ -203,8 +204,8 @@
      margin-left: 0vw;
   .side_logo {
       margin-top: 2px;
-      width: 300px;
-     height: 70px;
+      width: 50%;
+    //  height: 70px;
      margin: 0 auto;
     }
     .navbar-nav{
@@ -293,8 +294,8 @@
     margin-top: 0px;
     margin-left: 3px;
     width: 100%;
-    background-size: cover;
-    background: url("../public/img/core-img/favicon.png") center top no-repeat;
+    background-size: contain;
+    // background: url("../public/img/core-img/favicon.png") center top no-repeat;
     img{
       display: none;
     }

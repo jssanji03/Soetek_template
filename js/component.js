@@ -385,3 +385,15 @@ $(function () {
     }); 
 });
 /////###  顯示圖片 End  ###/////
+
+
+function closeLoading() {
+  const loadingCard = document.querySelector(".loading_card")
+  loadingCard.addEventListener("click", (e)=>{
+    let closeCard = e.target.getAttribute("class")
+    if (closeCard !== "btn-close js-close") {
+      return
+    }
+    loadingCard.style.display="none"
+  })
+}

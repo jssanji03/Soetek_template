@@ -75,6 +75,7 @@ $(function () {
     let committedData = []
     const newArea = document.querySelector('.newState');
     const committedArea = document.querySelector('.committedState');
+    const inProgressArea = document.querySelector('.inProgressState');
     const doneArea = document.querySelector('.doneState');
     
     //樣板
@@ -134,6 +135,13 @@ $(function () {
                 str = ''
                 str += template(obj)
                 committedArea.innerHTML += str
+                select2ByValue (obj.state)
+            }
+            else if (obj.state == "InProgress") {
+                // committedData.push(obj)
+                str = ''
+                str += template(obj)
+                inProgressArea.innerHTML += str
                 select2ByValue (obj.state)
             }
             else if (obj.state == "Done") {
@@ -205,8 +213,8 @@ $(function () {
         else if (value == "Committed") {
             $(".committedState .stateSelect").val("Committed").trigger("change");
         }
-        else if (value == "In Progress") {
-            $(".InProgress .stateSelect").val("InProgress").trigger("change");
+        else if (value == "InProgress") {
+            $(".inProgressState .stateSelect").val("InProgress").trigger("change");
         }
         else if (value == "Done") {
             $(".doneState .stateSelect").val("Done").trigger("change");
@@ -258,7 +266,7 @@ $(function () {
     // })
 
     initRenderState.forEach((selectBox) => {
-           const index = selectBox.selectedIndex;
+        const index = selectBox.selectedIndex;
         selectBox.addEventListener("change", function (e) {
             let selectedValue = e.target.value;
             const currentData = $(this).attr("data-id")
@@ -277,16 +285,52 @@ $(function () {
                     data[currentData - 1].state = "InProgress"
                     return item;
                 }
-            });
-            let str = ""
-            data.forEach(function (item) {
-                if (item.state == selectedValue) {
-                    str += template(item)
+                else if (selectedValue == "Done") {
+                    data[currentData - 1].state = "Done"
+                    return item;
                 }
-            })
-            committedArea.innerHTML = str
+            });
+            console.log("data",data);
+            
+            // let str = ""
+            // data.forEach(function (item) {
+            //     if (item.state == selectedValue) {
+            //         str += template(item)
+            //         select2ByValue (item.state)
+            //     }
+            // })
+            // newArea.innerHTML = str
+            // committedArea.innerHTML = str
+            
+            let str1 = ""
+            let str2 = ""
+            let str3 = ""
+            let str4 = ""
+            data.forEach(function (obj) {
+                if (obj.state == "New") {
+                    str1 += template(obj)
+                    newArea.innerHTML = str1
+                    select2ByValue(obj.state)
+                }
+                else if (obj.state == "Committed") {
+                    str2 += template(obj)
+                    committedArea.innerHTML = str2
+                    select2ByValue(obj.state)
+                }
+                else if (obj.state == "InProgress") {
+                    str3 += template(obj)
+                    committedArea.innerHTML = str3
+                    select2ByValue(obj.state)
+                }
+                else if (obj.state == "Done") {
+                    str4 += template(obj)
+                    doneArea.innerHTML = str4
+                    select2ByValue(obj.state)
+                }
+            });
         });
     })
+
     // function filter() {
     //     // filterRender(regionSearch.value);
     //     console.log(regionSearch);
@@ -323,9 +367,4 @@ $(function () {
     // }
     // filterRender();
 
-   
-    
-    
-    
-    
 });

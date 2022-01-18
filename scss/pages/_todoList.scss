@@ -33,42 +33,71 @@
 
 
 // ProgressBar
-.form-progress {
-	position: relative;
-	display: block;
-	// margin: 3rem auto;
-	// width: 100%;
-	// max-width: 400px;
+.overflow_area{
+    width: 60%;
+    margin: 0 auto;
+    overflow: hidden;
+    .form-progress {
+        position: relative;
+        display: block;
+        // clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);      
+        // width: 60%;
+        padding: 10px;
+        height: 60px;
+        margin: 0 auto;
+        .progress{
+            height: 7px;
+            width: 100%;
+            position: absolute;
+            top: 10px;
+            left: 5px;
+        }
+    }
 }
 
 .form-progress-indicator {
 	position: absolute;
-	top: -6px;
+	top: 0px;
 	left: 0;
 	display: inline-block;
 	width: 30px;
 	height: 30px;
     line-height: 28px;
-	background: white;
+	background: rgb(231, 231, 231);
+	// background: rgb(255, 255, 255);
 	border: 2px solid #ddd;
 	border-radius: 50%;
 	transition: all .2s ease-in-out;
 	transition-delay: .3s;
 	will-change: transform;
     text-align: center;
+	z-index: 100;
+	&.one	{ left: 5%; }
+	// &.two 	{ left: 12%; }
+	// &.three { left: 24%; }	
+	// &.four 	{ left: 36%; }	
+	// &.five 	{ left: 48%; }	
+	// &.six 	{ left: 60%; }	
+	// &.seven 	{ left: 72%; }	
+	// &.eight 	{ left: 85%; }	
+	// &.nine 	{ left: 97%; }	
 	
-	&.one	{ left: 0; }
-	&.two 	{ left: 33%; }
-	&.three { left: 66%; }	
-	&.four 	{ left: 96%; }	
-	
-	&.active {
+	&.actives {
 		animation: bounce .5s forwards;
 		animation-delay: .5s;
 		border-color: $primary;
-		background-color: $primary;
+		background-color:$primary;
         color: $white;
+        .stepName{
+            color:$primary ;
+        }
 	}
+    .stepName{
+        position: absolute;
+        width: 100px;
+        left: -35px;
+        text-align: center;
+    }
 }
 
 .step-container{
@@ -80,6 +109,28 @@
         top: 0;
         &.hidden{
             display: none;
+        }
+        .accordion-button{
+            padding: 10px;
+        }
+    }
+    .check-Step{
+        .nav-link{
+            // color:rgb(76, 143, 219);
+            &.active{
+                color: brown;
+            }
+            &.onPage{
+                background-color: rgb(219, 243, 250);
+                border-radius: 5px;
+            }
+            .far{
+                font-size: 14px;
+                margin-right: 10px;
+                // &.fa-check-circle{
+                //     color: rgb(60, 207, 212);
+                // }
+            }
         }
     }
     // .form-step:not(:first-of-type){

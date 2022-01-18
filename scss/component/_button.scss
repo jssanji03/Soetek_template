@@ -19,6 +19,10 @@
     font-weight: 400;
     }
 }
+// 新增  //
+.btn-add{
+    @include button($background-color:rgb(149, 157, 179),$fontColor: $white,$hover-color:$hover,$hover-fontColor:$white)
+}
 // 指派  //
 .btn-submit{
     @include button($background-color:$secondary,$fontColor: $white,$hover-color:$hover,$hover-fontColor:$white)
