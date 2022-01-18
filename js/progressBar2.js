@@ -12,16 +12,25 @@ let active = 1;
 
 function init() {
     let stepWidth = 0
-    steps.forEach((step, i) => {
-        console.log(i);
+    steps.forEach((step) => {
         if (step.className == 'form-progress-indicator one actives') {
             step.style.left = 0 + "%"
         } else {
             step.style.left = (stepWidth += 25) + "%"
         }
     });
+    moveCurrent()
 }
 init()
+
+function moveCurrent(element) {
+    steps.forEach((step, i) => {
+       if (i > 4) {
+             step.classList.add("hidden")
+        }
+    });
+}
+
 
 nextButton.forEach((next) => {
     next.addEventListener("click", () => {
@@ -30,7 +39,7 @@ nextButton.forEach((next) => {
     if (active > steps.length) {
         active = steps.length;
     }
-        updateProgress()
+        updateProgress("next")
         updateForm()
         updateMenu()
     })
@@ -41,7 +50,7 @@ preButton.forEach((pre) => {
     if (active < 1) {
         active = 1;
     }
-        preProgress()
+        preProgress("prev")
         updateForm()
         updateMenu()
     })
@@ -104,21 +113,7 @@ function updateMenu() {
         })
     })
 }
-function moveCurrent() {
-    steps.forEach((step, i) => {
-        
-        const nowStep = step.style.left
-        const currentForm = step.getAttribute("data-step")
-        let nowStepLeft = Number(nowStep.slice(0, nowStep.length - 1))
-        if (currentMenu == currentForm ) {
-            // step.style.left = ((nowStepLeft -= 25)) + "%"
-            console.log("hi");
-        }
-        // else {
-        //     form.classList.add("hidden")
-        // }
-    });
-}
+
 
 
 // function updateProgress() {
@@ -146,7 +141,7 @@ function moveCurrent() {
 // //     ((active - 1) / (steps.length - 1)) * 100 + "%";
 // }
 
-function updateProgress() {
+function updateProgress(element) {
     // toggle active class on list items
     steps.forEach((step, i) => {
         const actives = document.querySelectorAll('.actives')

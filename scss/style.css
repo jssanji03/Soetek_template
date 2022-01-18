@@ -2712,7 +2712,6 @@ section.page_title {
 .overflow_area {
   width: 60%;
   margin: 0 auto;
-  overflow: hidden;
 }
 
 .overflow_area .form-progress {
@@ -2767,6 +2766,10 @@ section.page_title {
 
 .form-progress-indicator.actives .stepName {
   color: #325eaf;
+}
+
+.form-progress-indicator.hidden {
+  display: none;
 }
 
 .form-progress-indicator .stepName {
