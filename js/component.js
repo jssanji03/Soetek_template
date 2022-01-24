@@ -259,7 +259,7 @@ function clearInput(e){
   }
 }
 body.addEventListener('keydown', clearInput ,false) 
-$('.datatable-excel').DataTable({
+const pasteDataTable = $('.datatable-excel').DataTable({
         searching: false,
         "paging": false,
         "ordering": false,
@@ -283,15 +283,27 @@ $('.datatable-excel').DataTable({
         "keys": {
           clipboard: true,
           blurable: true,
-        },
+       },
+        
         select: {
           style: 'multi',
+          selector: 'td:first-child'
         },
         dom: "<'row'<'col-xl-12'fr>>" +
             "<'row'<'col-sm-12'tlp>>",
     }
 );
 
+$( "#accordionDataTable" ).on("shown.bs.collapse", function() {
+	$.each($.fn.dataTable.tables(true), function(){
+	  $(this).DataTable().columns.adjust().draw();
+  });
+  pasteDataTable;
+  $('.fa-window-close').click(function () {
+    const table = $('.datatable-excel').DataTable();
+        table.row('.selected').remove().draw( false );
+    } );
+});
 
 // datatable-excel paste excel
 $('.datatable-excel input').on('paste', function(e) {

@@ -11,46 +11,132 @@ let active = 1;
 
 
 function init() {
-    let stepWidth = 0
-    steps.forEach((step) => {
-        if (step.className == 'form-progress-indicator one actives') {
-            step.style.left = 0 + "%"
-        } else {
-            step.style.left = (stepWidth += 25) + "%"
-        }
-    });
-    moveCurrent()
+    const select = $(".form-progress-indicator.three")
+    const next = $(select).next();
+    const prev = $(select).prev();
+    const prevSecond = $(prev).prev();
+    const nextSecond = $(next).next();
+    if ($(".form-progress-indicator").hasClass("three")) {
+        select.addClass("selected")
+        prev.addClass("prev")
+        prevSecond.addClass("secondPre")
+        next.addClass("next")
+        nextSecond.addClass("secondNext")
+    }
 }
 init()
 
 function moveCurrent(element) {
-    steps.forEach((step, i) => {
-       if (i > 4) {
-             step.classList.add("hidden")
-        }
-    });
+    if (element == "下一頁") {
+        const selected = $(".selected").next();
+        const next = $(selected).next();
+        const prev = $(selected).prev();
+        const prevSecond = $(prev).prev();
+        const nextSecond = $(next).next();
+        if (active > 3 ) { 
+            $(selected).removeClass("next secondNext prev secondPre hidden").addClass("selected");
+            $(prev).removeClass("next secondNext secondPre selected hidden").addClass("prev");
+            $(next).removeClass("secondNext secondPre selected hidden").addClass("next");
+            $(nextSecond).removeClass("secondPre prev next selected hidden").addClass("secondNext");
+            $(prevSecond).removeClass("secondNext prev next selected hidden").addClass("secondPre");
+            $(prevSecond).prevAll().removeClass("next secondNext prev secondPre").addClass('hidden')
+            $(nextSecond).nextAll().removeClass("next secondNext prev secondPre").addClass('hidden')
+        } 
+    }
+    else if (element == "上一頁") {
+        const selected = $(".selected").prev();
+        const next = $(selected).next();
+        const prev = $(selected).prev();
+        const prevSecond = $(prev).prev();
+        const nextSecond = $(next).next();
+
+        $(selected).removeClass("next secondNext prev secondPre hidden").addClass("selected");
+        $(prev).removeClass("next secondNext secondPre selected hidden").addClass("prev");
+        $(next).removeClass("secondNext secondPre selected hidden").addClass("next");
+        $(nextSecond).removeClass("secondPre prev next selected hidden").addClass("secondNext");
+        $(prevSecond).removeClass("secondNext prev next selected hidden").addClass("secondPre");
+        $(prevSecond).prevAll().removeClass("next secondNext prev secondPre").addClass('hidden')
+        $(nextSecond).nextAll().removeClass("next secondNext prev secondPre").addClass('hidden')
+        if (active < 3) { 
+            const select = $(".form-progress-indicator.three");
+            const next = $(select).next();
+            const prev = $(select).prev();
+            const prevSecond = $(prev).prev();
+            const nextSecond = $(next).next();
+            select.removeClass("next secondNext prev secondPre hidden").addClass("selected")
+            prev.removeClass("next secondNext prev secondPre hidden selected").addClass("prev")
+            prevSecond.removeClass("next secondNext prev secondPre hidden selected").addClass("secondPre")
+            next.removeClass("next secondNext prev secondPre hidden selected").addClass("next")
+            nextSecond.removeClass("next secondNext prev secondPre hidden selected").addClass("secondNext")
+        } 
+    }
+    else {
+        let selected = element;
+        steps.forEach((step) => {
+            const currentStep = step.getAttribute("data-step")
+            if (selected == currentStep ) {
+                const select = $(".form-progress-indicator.three");
+                const next = $(select).next();
+                const prev = $(select).prev();
+                const prevSecond = $(prev).prev();
+                const nextSecond = $(next).next();
+                if (selected == 2 ) { 
+                    select.removeClass("next secondNext prev secondPre actives hidden").addClass("selected")
+                    prev.removeClass("next secondNext prev secondPre hidden selected").addClass("prev")
+                    prevSecond.removeClass("next secondNext prev secondPre hidden selected").addClass("secondPre")
+                    next.removeClass("next secondNext prev secondPre hidden selected actives").addClass("next")
+                    nextSecond.removeClass("next secondNext prev secondPre hidden selected actives").addClass("secondNext");
+                    progressBar.style.width = 25 + "%";
+                }
+                else if (selected == 1) {
+                    prev.removeClass("actives")
+                    progressBar.style.width = 0 + "%";
+                }
+                else {
+                const selected = $(step).removeClass("next secondNext prev secondPre hidden").addClass("selected");
+                const next = $(selected).next();
+                const prev = $(selected).prev();
+                const prevSecond = $(prev).prev();
+                const nextSecond = $(next).next();
+                $(selected).removeClass("next secondNext prev secondPre hidden").addClass("selected actives");
+                $(prev).removeClass("next secondNext secondPre selected hidden").addClass("prev actives");
+                $(next).removeClass("secondNext secondPre selected actives hidden").addClass("next");
+                $(nextSecond).removeClass("secondPre prev next selected actives hidden").addClass("secondNext");
+                $(prevSecond).removeClass("secondNext prev next selected hidden").addClass("secondPre actives");
+                $(prevSecond).prevAll().removeClass("next secondNext prev secondPre").addClass('hidden')
+                $(nextSecond).nextAll().removeClass("next secondNext prev secondPre").addClass('hidden')
+                progressBar.style.width = 50 + "%";
+                }
+            }
+            // else {
+            //     form.classList.add("hidden")
+            // }
+        })
+    }
 }
 
 
 nextButton.forEach((next) => {
-    next.addEventListener("click", () => {
-    // localStorage.setItem("myActive", active++);
+    next.addEventListener("click", (e) => {
     active++
     if (active > steps.length) {
         active = steps.length;
     }
-        updateProgress("next")
+        updateProgress()
+        moveCurrent("下一頁")
         updateForm()
         updateMenu()
     })
 })
+   
 preButton.forEach((pre) => {
     pre.addEventListener("click", () => {
     active--;
     if (active < 1) {
         active = 1;
     }
-        preProgress("prev")
+        preProgress()
+        moveCurrent("上一頁")
         updateForm()
         updateMenu()
     })
@@ -69,84 +155,60 @@ function updateForm() {
 
 function updateMenu() {
     menuStep.forEach((menu) => {
-        const currentMenu = menu.getAttribute("data-step")
+        const currentMenu = menu.getAttribute("data-slide")
         const parentNode = menu.parentNode.previousElementSibling
         if (active == currentMenu) {
             menu.classList.add("active")
             menu.classList.add("onPage")
             menu.classList.remove("disabled")
-            // console.log(menu.firstChild.classList = "far fa-check-circle");
             parentNode.children[0].firstChild.classList = "far fa-check-circle"
         }
         else {
             menu.classList.remove("onPage")
         }
-        menu.addEventListener("click", (e) => {
+        $(menu).click((e) => {
+            const clickTarget = e.target.getAttribute("data-slide")
+            const onClick = e.target
+            
+            setTimeout(() => {
+                const $preloader = $('.preloader')
+                if ($preloader) {
+                    $preloader.css('display', 'flex')
+                    $preloader.css('height', 0)
+                    setTimeout(() => {
+                        $preloader.children().hide()
+                        $('.preloader').css('display', 'none')
+                        $('.preloader').css('height', '100vh')
+                    }, 200)
+                }
+                else {
+                    $preloader.css('display', 'none')
+                    $preloader.css('height', '100vh')
+                }
+            }, 200)
+            if (clickTarget !== "") {
+                onClick.classList.add("onPage")
+                $(onClick).parent().siblings().children().removeClass("onPage")
+            }
             formStep.forEach((form) => {
                 const currentForm = form.getAttribute("data-step")
                 if (currentMenu == currentForm ) {
-                    form.classList.remove("hidden")
-                    // menu.classList.add("onPage")
-                    } else {
-                    form.classList.add("hidden")
-                    // menu.classList.remove("onPage")
-                }
-            })
-            steps.forEach((step, i) => {
-                
-                const nowStep = step.style.left
-                const currentStep = step.getAttribute("data-step")
-                let nowStepLeft = Number(nowStep.slice(0, nowStep.length - 1))
-                if (currentMenu == currentStep ) {
-                    step.style.left = 50 + "%"
-                }
-                else if (currentMenu < currentStep) {
-                    step.style.left = (nowStepLeft += 25) + "%"
-                    console.log(nowStepLeft);
+                    form.classList.remove("hidden");
+                    moveCurrent(clickTarget)
                 }
                 else {
-                    step.style.left = ((nowStepLeft -= 25)) + "%"
+                    form.classList.add("hidden")
                 }
-            });
-            // const steps = document.querySelectorAll(".form-progress-indicator");
-             
+            })
         })
     })
 }
 
-
-
-// function updateProgress() {
-//     // toggle active class on list items
-//     steps.forEach((step, i) => {
-//         const nowStep = step.style.left
-//         let nowStepLeft = nowStep.slice(0, nowStep.length - 1)
-//         const currentStep = formStep.getAttribute("data-step")
-//         console.log("active",active);
-//         console.log("currentStep",currentStep);
-//         if (i < active) {
-//             step.classList.add("active");
-//             // progressBar.style.width = 50 + "%";
-//         } 
-//         else {
-//             step.classList.remove("active");
-//         }
-//         if (active > 2) {
-//             step.style.left = (nowStepLeft-= 42) + "%"
-//         }
-//     });   
-//     // set progress bar width  
-
-// //   progressBar.style.width = 
-// //     ((active - 1) / (steps.length - 1)) * 100 + "%";
-// }
-
-function updateProgress(element) {
+function updateProgress() {
     // toggle active class on list items
     steps.forEach((step, i) => {
         const actives = document.querySelectorAll('.actives')
-        const nowStep = step.style.left
-        let nowStepLeft = Number(nowStep.slice(0, nowStep.length - 1))
+        console.log(actives.length);
         if (i < active) {
             progressBar.style.width = (actives.length) * 25 + '%'
             step.classList.add("actives");
@@ -155,20 +217,8 @@ function updateProgress(element) {
             step.classList.remove("actives");
         }
         if (active > 3) {
-            step.style.left = ((nowStepLeft -= 25)) + "%"
             progressBar.style.width = 50 + "%";
         }
-        // if (i < active) {
-        //     progressBar.style.width = (actives.length) * 25 + '%'
-        //     step.classList.add("actives");
-        // } 
-        // else {
-        //     step.classList.remove("actives");
-        // }
-        // if (active > 3) {
-        //     step.style.left = ((nowStepLeft -= 25)) + "%"
-        //     progressBar.style.width = 50 + "%";
-        // }
     });   
     
 }
@@ -176,9 +226,9 @@ function updateProgress(element) {
 function preProgress() {
     // toggle active class on list items
     steps.forEach((step, i) => {
-        const nowStep = step.style.left
+        // const nowStep = step.style.left
+        // let nowStepLeft = Number(nowStep.slice(0, nowStep.length - 1))
         const actives = document.querySelectorAll('.actives')
-        let nowStepLeft = Number(nowStep.slice(0, nowStep.length - 1))
         if(i < active) {
             progressBar.style.width = (actives.length) * 25 + '%'
             step.classList.add("actives");
@@ -186,8 +236,7 @@ function preProgress() {
         else {
             step.classList.remove("actives");
         }
-         if (active > 2) {
-            step.style.left = ((nowStepLeft += 25)) + "%"
+        if (active > 2) {
             progressBar.style.width = 50 + "%";
          }
          else if (active == 2) {
@@ -199,12 +248,39 @@ function preProgress() {
     });   
 }
 
+function loadingPage() {
+    console.log("hi");
+    setInterval(() => {
+          const $preloader = $('.preloader')
+          if ($preloader) {
+            $preloader.css('height', 0)
+            setInterval(() => {
+              $preloader.children().hide()
+            }, 200)
+          }
+    }, 200)
+}
+// setTimeout(() => {
+//           const $preloader = $('.preloader')
+//           if ($preloader) {
+//             $preloader.css('height', 0)
+//             setTimeout(() => {
+//               $preloader.children().hide()
+//             }, 200)
+//           }
+// }, 200)
+    
 
 
-// const exampleModal = document.querySelector('exampleModal')
-// exampleModal.addEventListener('show.bs.modal', function (event) {
-//   // Button that triggered the modal
-//     const button = event.relatedTarget
-//     $('#full-width').modal();
-
-// })
+function alertFunc() {
+    console.log("hi");
+  setTimeout(() => {
+          const $preloader = $('.preloader')
+          if ($preloader) {
+            $preloader.css('height', 0)
+            setTimeout(() => {
+              $preloader.children().hide()
+            }, 200)
+          }
+    }, 200)
+}

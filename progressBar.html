@@ -41,7 +41,10 @@
             </div>
         </div>
         <!-- /#Color Sidebar -->
-
+        <!-- Preloader -->
+        <div class="preloader flex-column justify-content-center align-items-center">
+            <img class="animation__wobble" src="dist/img/AdminLTELogo.png" alt="AdminLTELogo" height="60" width="60">
+        </div>
         <!-- Sidebar -->
         <div class="d-none d-md-block" id="sidebar-wrapper">
             <div class="side_logo">
@@ -148,31 +151,31 @@
                         <div class="col-md-2 check-Step">
                             <ul class="nav flex-column">
                                 <li class="nav-item">
-                                    <a class="nav-link js-check-Step active onPage" data-step="1" href="#" ><i class="far fa-circle"></i>型別尺寸</a>
+                                    <a class="nav-link js-check-Step active onPage" data-slide="1" href="#" ><i class="far fa-circle"></i>型別尺寸</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link js-check-Step disabled" data-step="2" href="#" ><i class="far fa-circle"></i>型別規格</a>
+                                    <a class="nav-link js-check-Step disabled" data-slide="2" href="#" ><i class="far fa-circle"></i>型別規格</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link js-check-Step disabled" data-step="3" href="#" ><i class="far fa-circle"></i>生料規格</a>
+                                    <a class="nav-link js-check-Step disabled" data-slide="3" href="#" ><i class="far fa-circle"></i>生料規格</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link js-check-Step disabled" data-step="4" href="#" ><i class="far fa-circle"></i>磨床</a>
+                                    <a class="nav-link js-check-Step disabled" data-slide="4" href="#" ><i class="far fa-circle"></i>磨床</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link js-check-Step disabled" data-step="5" href="#" ><i class="far fa-circle"></i>供應商</a>
+                                    <a class="nav-link js-check-Step disabled" data-slide="5" href="#" ><i class="far fa-circle"></i>供應商</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link js-check-Step disabled" data-step="6" href="#" ><i class="far fa-circle"></i>零配件規格</a>
+                                    <a class="nav-link js-check-Step disabled" data-slide="6" href="#" ><i class="far fa-circle"></i>零配件規格</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link js-check-Step disabled" data-step="7" href="#" ><i class="far fa-circle"></i>零配件加工</a>
+                                    <a class="nav-link js-check-Step disabled" data-slide="7" href="#" ><i class="far fa-circle"></i>零配件加工</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link js-check-Step disabled" data-step="8" href="#" ><i class="far fa-circle"></i>搪孔</a>
+                                    <a class="nav-link js-check-Step disabled" data-slide="8" href="#" ><i class="far fa-circle"></i>搪孔</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link js-check-Step disabled" data-step="9" href="#" ><i class="far fa-circle"></i>鉆孔+攻牙</a>
+                                    <a class="nav-link js-check-Step disabled" data-slide="9" href="#" ><i class="far fa-circle"></i>鉆孔+攻牙</a>
                                 </li>
                             </ul>
                         </div>
@@ -3537,17 +3540,15 @@
                             <div class="col-sm-6 col-md-4 col-lg-3">
                                 <div class="form-group pb-3">
                                     <div class="form-group">
-                                        <label class="control-label" for="z0__OrderMaterielAttributesForm_Milling2">2銑</label>
-                                        <div class="checkbox">
-                                            <div class="bootstrap-switch-off bootstrap-switch bootstrap-switch-wrapper bootstrap-switch-animate"
-                                                style="width: 86px;">
-                                                <div class="bootstrap-switch-container" style="width: 126px; margin-left: -42px;"><span
-                                                        class="bootstrap-switch-handle-on bootstrap-switch-primary"
-                                                        style="width: 42px;">ON</span><span class="bootstrap-switch-label"
-                                                        style="width: 42px;">&nbsp;</span><span
-                                                        class="bootstrap-switch-handle-off bootstrap-switch-default"
-                                                        style="width: 42px;">OFF</span><input type="checkbox"
-                                                        name="Model[0].OrderMaterielAttributesForm.Milling2" data-bootstrap-switch=""></div>
+                                        <label class="form-label">2銑</label>
+                                        <div class="input-group mb-3">
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                                                <label class="form-check-label" for="inlineRadio1">on</label>
+                                            </div>
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                                                <label class="form-check-label" for="inlineRadio2">off</label>
                                             </div>
                                         </div>
                                     </div>
@@ -3599,8 +3600,8 @@
     <!-- Active js -->
     <script src="js/sidebar.js"></script>
     <script src="js/component.js"></script>
-    <script src="js/progressBar.js"></script>
-    <!-- <script src="js/progressBar2.js"></script> -->
+    <!-- <script src="js/progressBar.js"></script> -->
+    <script src="js/progressBar2.js"></script>
 
 </body>
 

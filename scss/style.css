@@ -717,8 +717,25 @@ table.dataTable .assignActive {
   color: #ffffff;
 }
 
+.TableArea #accordionDataTable .card-header {
+  background-color: #dae6f1;
+  color: #ffffff;
+}
+
+.TableArea #accordionDataTable .card-header .accordion-button {
+  padding: 0px;
+  background-color: transparent;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  outline: none;
+}
+
 .TableArea .table-Hover td, .TableArea .table-Hover th {
   border-top: 1px solid #9bb1db;
+}
+
+.TableArea .table-Hover tbody tr td {
+  padding: 0px;
 }
 
 .TableArea .table-Hover tbody tr:hover {
@@ -1522,6 +1539,19 @@ table.dataTable .assignActive {
 .loading_card .loadingGif {
   height: 30px;
   margin: 0 auto;
+}
+
+.preloader {
+  display: none;
+  background-color: #ccc;
+  height: 100vh;
+  width: 100vw;
+  -webkit-transition: height 200ms linear;
+  transition: height 200ms linear;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 9999;
 }
 
 .img-circle {
@@ -2770,6 +2800,30 @@ section.page_title {
 }
 
 .form-progress-indicator.hidden {
+  display: none;
+}
+
+.form-progress-indicator.secondPre {
+  left: 0%;
+}
+
+.form-progress-indicator.prev {
+  left: 25%;
+}
+
+.form-progress-indicator.selected {
+  left: 50%;
+}
+
+.form-progress-indicator.next {
+  left: 75%;
+}
+
+.form-progress-indicator.secondNext {
+  left: 100%;
+}
+
+.form-progress-indicator.secondNext ~ div {
   display: none;
 }
 

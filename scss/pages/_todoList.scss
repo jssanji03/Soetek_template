@@ -94,6 +94,24 @@
     &.hidden{
         display: none;
     }
+    &.secondPre{
+        left: 0%;
+    }
+    &.prev{
+        left: 25%;
+    }
+    &.selected{
+        left: 50%;
+    }
+    &.next{
+        left: 75%;
+    }
+    &.secondNext{
+        left: 100%;
+    }
+    &.secondNext ~ div{
+        display: none;
+    }
     .stepName{
         position: absolute;
         width: 100px;
